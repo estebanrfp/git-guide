@@ -7,6 +7,9 @@ Se acepta todo tipo de pull request, nuestra intención de base sobre este repos
 
 @Slvrkl @estebanrfp
 
+
+[Guia autoreferente](http://estebanrfp.github.io/git/)
+
 Visite nuestra comunidad:
 
 [evercoders.com](http://evercoders.com)
