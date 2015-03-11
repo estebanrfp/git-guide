@@ -55,7 +55,7 @@
 		</section>
 
 		<!-- EXAMPLES / config-->
-		<section id="config" data-x="-1500" data-y="-1500" data-scale="1">
+		<section id="config" data-x="-3000" data-y="-1500" data-scale="1">
 			<h2>Configuración</h2>
 			<ul>
 				<li>
@@ -324,30 +324,116 @@ Tiene tres tipos de ejeción:</h3>
 
 		<!-- EXAMPLES -->
 		<section id="examples" data-x="-1350" data-y="-1000" data-scale="1">
-			<h2>examples</h2>
+			<h1>CLASE 2</h1>
+				<h3>Ramas y Fusiones</h3>
+		</section>
+
+		<!-- Clase 2 -->
+		<section id="clase2" data-x="-1650" data-y="-1500" data-scale="1">
+			<h2>RAMAS</h2>
+				<h3>Una rama es una línea del tiempo en la historia de nuestro repositorio, funciona para crear features, arreglar bugs, experimentar, etc. Sin afectar la versión estable.</h3>
+		</section>
+
+		<section id="clase2" data-x="-1050" data-y="-1700" data-scale="1">
+			<h2>Línea Master</h2>
+				<h3>Esta línea donde empezamos se le conoce como master, es la línea principal y estable del proyecto.</h3>
+		</section>
+
+		<section id="clase2" data-x="-1350" data-y="-2000" data-scale="1">
+			<h2>Creando una rama</h2>
+				<h3>INSERTAR IMAGEN.</h3>
+		</section>
+
+		<section id="clase2" data-x="-1000" data-y="-2200" data-scale="1">
+			<h2>Tenemos nuestra línea principal master (Trunks), pero digamos que alguien quiere crear una rama para hacer otras cosas llamada experimental (Goten).</h2>
+				<ul>
+					<li>Eso lo podemos lograr con:</li>
+				</ul>
+				<code>git branch nombre-de-la-rama</code>
+		</section>
+
+		<section id="clase2" data-x="-2050" data-y="-2400" data-scale="1">
+			<h2>De ésta forma creamos una nueva línea (Rama) en la que nosotros podemos trabajar sin afectar a master</h2>
+		</section>
+
+		<section id="clase2" data-x="-900" data-y="-2900" data-scale="1">
+			<h1>Extra</h1>
+			<h3>Para eliminar una rama se usa el comando:</h3>
+				<code>git branch -d nombre de la rama</code>
+		</section>
+
+		<section id="clase2" data-x="-2050" data-y="-3000" data-scale="1">
+			<h1>CONCEPTO HEAD</h1>
+			<h3>Es la forma en que nos movemos de un punto a otro (commit), Nuestro HEAD es el punto en donde nos encontramos.</h3>
+		</section>
+
+		<section id="clase2" data-x="-3050" data-y="-3500" data-scale="1">
+			<h1>FUSIONES</h1>
+			<h3>Es la creación de un nuevo commit que vincule una de nuestras ramas, con alguna otra rama , dando como resultado un nuevo commit.</h3>
+		</section>
+
+		<section id="clase2" data-x="-3150" data-y="-4000" data-scale="1">
+			<h1>Para hacer una fusión tenemos que seguir 2 pasos:</h1>
 			<ul>
-				<li><h3>basic</h3>
-				<ul>
-					<li><a href="examples/impress/" target="_blank">impress.js</a>
-					<li><a href="examples/simple/" target="_blank">simple</a>
-					<li><a href="examples/zoomable/" target="_blank">zoomable</a>
-					<li><a href="examples/animation/" target="_blank">animation</a>
-					<li><a href="examples/ajax/" target="_blank">ajax</a>
-				</ul></li>
-				<li><h3>advanced</h3>
-				<ul>
-					<li><a href="examples/automatic-layout/" target="_blank">automatic layout</a>
-					<li><a href="examples/cube/" target="_blank">cube</a>
-					<li><a href="examples/form-dynamic/" target="_blank">form dynamic</a>
-					<li><a href="examples/tab-control/" target="_blank">tab control</a>
-					<li><a href="examples/vacation/" target="_blank">vacation</a>
-				</ul></li>
-				<li><h3>presentation templates</h3>
-				<ul>
-					<li><a href="examples/jqueryui/" target="_blank">jQuery UI</a>
-				</ul></li>
+				<li>Situarnos en la línea que va a absorber.</li>
+				<li>Fusionar</li>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-3600" data-scale="1">
+			<h1>1. Situarnos en la línea que va a absorber.</h1>
+			<h3>Es la línea que absorbera la rama que nosotros deseamos, en este caso será experimental. Lo logramos hacer con el comando antes visto checkout</h3>
+			<code>git checkout nombre de la rama</code>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-4000" data-scale="1">
+			<h1>2. Fusionar</h1>
+			<h3>Aquí es cuando nuestra línea que absorbe toma a la línea experimental y nos dá nuestro nuevo commit.</h3>
+			<br />
+			<h2>Cuando se hace la fusión nos pueden dar 2 resultados diferentes:</h2>
+			<ul>
+				<li>Fast-Forward -> Todo lindo y hermoso.</li>
+				<li>Manual Merge -> Todo feo y horrible.</li>
 			</ul>
-			<h4>and more <a href="https://github.com/jmpressjs/jmpress.js/wiki/Examples" target="_blank">community examples here</a>.</h4>
+		</section>
+
+		<section id="clase2" data-x="-2650" data-y="-4500" data-scale="1">
+			<h1>Fast-Forwardr</h1>
+			<h3>Simplemente hará la fusión sin preguntar nada, es cuando los gestores trabajan archivos diferentes al repositorio</h3>
+		</section>
+
+		<section id="clase2" data-x="-750" data-y="-4500" data-scale="1">
+			<h2>Cuando se hace la fusión nos pueden dar 2 resultados diferentes:</h2>
+			<h3>Ejemplo:</h3>
+			<ul>
+				<li>Esteban Fuster Pozzi -> index.html</li>
+				<li>Miguel Nieva -> styles.css</li>
+			</ul>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-4800" data-scale="1">
+			<h1>Manual Merge</h1>
+			<h2>Es cuando dos desarrolladores o tú trabajan sobre el mismo archivo en la fusión</h2>
+			<ul>
+				<li>Esteban Fuster Pozzi -> index.html</li>
+				<li>Miguel Nieva -> index.html</li>
+			</ul>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-5000" data-scale="1">
+			<h1>GIT LOG & ALIASES</h1>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-5400" data-scale="1">
+			<h2>En la terminal podemos igual ver como esta avanzando el proyecto, con el comando git log, de esta forma visualizaremos de forma simple y sintetizada el dibujo de las ramas.</h2>
+			<h3>El comando es:</h3>
+			<code>git log --oneline --graph --all</code>
+		</section>
+
+		<section id="clase2" data-x="-1650" data-y="-5800" data-scale="1">
+			<h3>Sabemos que es un comando largo y da pereza, para eso existen los aliases los cuales hacen que no tengamos que escribir todo, es poder poner nuestros comandos git como queramos con el nombre que sea.</h3>
+			<code>git config --global alias.filigit '--oneline --graph --all'</code>
+			<h3>Ahora simplemente para usarlo hacemos lo siguiente:</h3>
+			<code>git log filigit</code>
 		</section>
 
 	</article>
