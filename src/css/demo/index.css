@@ -617,3 +617,17 @@ section:not(.active) {
 		opacity: 1;
 	}
 }
+/* ==========================================================================
+   Imagen
+   ========================================================================== */
+
+	.github {
+		height: 200px;
+	}
+
+	.ordensobre {
+		background-color: #FDFDFD;
+	  width: 906px !important;
+	  top: 106px;
+		display: inline-flex;
+	}
