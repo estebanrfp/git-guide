@@ -504,11 +504,82 @@ Tiene tres tipos de ejeción:</h3>
 			<code>git remote</code>
 		</section>
 
+		<section id="clase3" data-x="-7080" data-y="1800" data-scale="1">
+			<br />
+			<h1>Lo que hace es vincular nuestro repositorio local (Computadora) con nuestro repositorio remoto (Github).</h1>
+		</section>
+
+		<section id="clase3" data-x="-7080" data-y="2300" data-scale="1">
+			<h1>Ejecutamos el comando:</h1>
+			<code>git remote add origin <strong>< Repositorio de github ></strong></code>
+			<h2>De esta forma se vinculan y se conocen.</h2>
+			<h2>Para saber nuestros enlaces que hacemos via repositorio:</h2>
+			<code>git remote -v</code>
+		</section>
+
+		<section id="clase3" data-x="-7080" data-y="2700" data-scale="1">
+			<h1>Finalmente ahora ya que trabajamos, hay que mandar esos cambios al repositorio de github</h1>
+			<code>git push origin master</strong></code>
+			<h2>De esta forma se vinculan y se conocen.</h2>
+			<h2>master -> Es la rama que mandaremos a github, obviamente podemos poner cualquier rama.</h2>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="2700" data-scale="1">
+			<h1>2) Proyectos propios (Yo + Equipo)</h1>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="3100" data-scale="1">
+			<h3>
+				Es lo mismo que el proceso anterior, pero todos los cambios que hagan los colaboradores, podran hacerlos sin preguntar.
+				Ya no solo eres tú, si no que ya habrá alguien más.
+				Los colaboradores no piden permiso, suben cambios y se acabo.
+			</h3>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="3600" data-scale="1">
+			<h2>Esto se explica a través de un proceso llamado:</h2>
+				<h2>git fetch & git merge</h2>
+				<h2>Cuando nosotros generamos un enlace remoto con un repositorio, hay una rama escondida llamada: origin/master y lo que haces es espejear el repositorio de github a tú área local.</h2>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="3990" data-scale="1">
+			<code>git fetch</code>
+				<h2>Lo que hace git fetch es espejear nuestro repositorio remoto con nuestro origin/master</h2>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="4300" data-scale="1">
+			<h2>Entonces para sincronizarnos usamos:</h2>
+			<code>git fetch origin</code>
+			<h2>Ahora lo que tenemos en remoto ya esta en la línea origin/master</h2>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="4600" data-scale="1">
+			<h2>Pero que pasa si yo creo commit totalmente distinto a lo que hay en origin/master ?</h2>
+		</section>
 
 
+		<section id="clase3" data-x="-4080" data-y="4800" data-scale="1">
+			<code>git merge</code>
+			<h2>Ahora que tenemos dos commits totalmente distintos, llego la hora de fusionarlos y así crear un nuevo commit.</h2>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="5100" data-scale="1">
+			<h1>Para esto solo tenemos que estar en la rama principal y ejecutar:</h1>
+			<code>git merge origin/master</code>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="5500" data-scale="1">
+			<h1>Finalmente ya que tenemos la fusión, ahora lo pasamos al repositorio remoto</h1>
+			<code>git push</code>
+		</section>
+
+		<section id="clase3" data-x="-4080" data-y="5580" data-scale="1">
+			<h1>Solo usamos el comando visto en el primer workflow.</h1>
+			<code>git push origin master</code>
+		</section>
 
 
-
+ <!-- EN CONSTRUCCION -->
 
 
 	</article>
