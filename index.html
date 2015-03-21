@@ -24,7 +24,7 @@
 	<script type="text/javascript" src="dist/jmpress.all.min.js"></script>
 </head>
 <body>
-	<!-- NAVIGATION -->
+	<!-- MENU -->
 	<ul class="nav">
 		<li><a href="#home" class="go">INICIO</a>&middot;
 		<li><a href="#/about">Clase 1</a>&middot;
@@ -40,48 +40,21 @@
 
 	<article class="jmpress">
 
-		<!-- HOME -->
+		<!--
+		#############################################
+		#																						#
+		#																						#
+		#   1. HOME																	#
+		#																						#
+		#																						#
+		#############################################
+		-->
 		<section id="home">
 			<h1>GUIA: INICIACIÓN A GIT</h1>
 		 <!-- <embed class="github" type="image/svg+xml" src="src/images/octocat.svg" /> -->
 			<div class="ocean"></div>
 			<div class="ocean-floor"></div>
 		</section>
-
-		<!-- EXAMPLES /
-		<section id="config" data-x="-3000" data-y="-1500" data-scale="1">
-			<h2>Configuración</h2>
-			<ul>
-				<li>
-					<strong>Definimos Nombre, Correo</strong>
-
-					<p>git config --global user.name "Tu nombre"</p>
-					git config --global user.email "Tu correo"
-					<strong>--global</strong> afecta a todos los usuarios del sistema.
-				</li>
-				<li>
-					Activamos la nterfaz de colores
-					git config --global user.ui true" (default / true)
-
-				</li>
-				<li>
-					Listamos nuestra configuración global.
-					git config --global --list"
-				</li>
-			</ul>
-		</section> config-->
-
-		<!-- ABOUT Original
-		<section id="about" data-x="-100" data-y="400">
-			<h4>Sobre</h4>
-			<h3>pure <code>&lt;html&gt;</code>, <code>.css {}</code> and <code>function javascript() {}</code></h3>
-			<h4 class="offset3">and use CSS3 transitions and transformations.</h4>
-			<section id="pan" data-y="200" data-x="-400">I can pan,</section>
-			<section id="rotate" data-y="700" data-x="-300" data-rotate="90">rotate</section>
-			<section id="scale" data-y="500" data-x="-100" data-rotate="180" data-scale=".3">
-				and scale
-				<h4>between elements on an infinite canvas.</h4>
-			</section> -->
 
 			<section class="ordensobre" id="about" data-x="0" data-y="50">
 
@@ -103,7 +76,15 @@
 			</section>
 		</section>
 
-		<!-- FEATURES -->
+		<!--
+		#############################################
+		#																						#
+		#																						#
+		#   2. Clase 1															#
+		#																						#
+		#																						#
+		#############################################
+		-->
 		<section id="features" data-x="0" data-y="-800" data-scale="1.4" data-rotate="90">
 			<h1>CLASE 1</h1>
 			<h3>Instalación - Conceptos Básicos</h3>
@@ -161,6 +142,8 @@
 
 		</section> -->
  		<!-- Modificacion Presenter -->
+
+
 		<section id="presenter" data-x="1600" data-y="600" data-template="stepper">
 			<h1>ARQUITECTURA DEL ÁRBOL</h1>
 			<ul>
@@ -172,7 +155,7 @@
 				<p data-jmpress="drive-right after 500ms">Es el registro de todo el proyecto.</p>
 		</section>
 
-		<!-- DEVELOPER -->
+
 		<section id="developer" data-x="2000" data-y="-100" data-template="stepper">
 			<h1>CONFIGURACIÓN</h1>
 			<h3>Definimos Nombre, Correo</h3>
@@ -224,66 +207,62 @@
 
 			<section id="controls">
 				<code>git init</code>
-				<h3>Inicia el tracking de nuestra carpeta</h3>
-				<!--
-				<h4 class="offset1">Map any key to an action in jmpress.js, <a href="http://jmpressjs.github.com/docs/keyboard.html" target="_blank">read more</a>.</h4>
-				<pre class="offset1 span7 pull-left">// bind the 'o' key to select a step with the id 'overview'
-$('#jmpress').jmpress({
-    keyboard: {
-        keys: {
-            79: ['select', '#overview']
-        }
-    }
-});</pre> -->
+					<h3>Inicia el tracking de nuestra carpeta</h3>
+										<!--
+										<h4 class="offset1">Map any key to an action in jmpress.js, <a href="http://jmpressjs.github.com/docs/keyboard.html" target="_blank">read more</a>.</h4>
+										<pre class="offset1 span7 pull-left">// bind the 'o' key to select a step with the id 'overview'
+						$('#jmpress').jmpress({
+						    keyboard: {
+						        keys: {
+						            79: ['select', '#overview']
+						        }
+						    }
+						});</pre> -->
 			</section>
 
 			<section id="routing">
 				<code>git status</code>
-				<h3>Estado en el que se encuentra nuestro proyecto</h3>
-				<!--
-				<h3 class="offset1"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">routing</a></h3>
-				<pre class="offset1 span5">$('#jmpress').jmpress('route', [
-    '#one', '#three', '#two', '#four'
-]);</pre>
-				<h4 class="offset4"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">read more about routing</a></h4> -->
+					<h3>Estado en el que se encuentra nuestro proyecto</h3>
+									<!--
+									<h3 class="offset1"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">routing</a></h3>
+									<pre class="offset1 span5">$('#jmpress').jmpress('route', [
+					    '#one', '#three', '#two', '#four'
+					]);</pre>
+									<h4 class="offset4"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">read more about routing</a></h4> -->
 			</section>
 
 			<section id="secondary">
 				<code>git add</code>
-				<h3>agregamos al staging area los archivos seleccionados Agregamos todos los archivos.</h3>
-				<code>git add -A</code>
-				<h3>Agregamos solo el archivo index.html o el nombre del archivo que usemos.</h3>
-				<code>git add index.html</code>
-
-				<!--
-				<h3><a href="http://jmpressjs.github.com/docs/pluginsecondary.html" target="_blank">secondary animations</a></h3>
-				<pre class="offset1 span5">$.jmpress('apply', '#secondary', {
-    secondary: {
-        rotate: { z: 20, x: 20, y:20 },
-        '': 'self'
-    }
-});</pre>
-				<h4 class="offset4"><a href="http://jmpressjs.github.com/docs/pluginsecondary.html" target="_blank">read more about the secondard plugin</a></h4> -->
+						<h3>agregamos al staging area los archivos seleccionados Agregamos todos los archivos.</h3>
+								<code>git add -A</code>
+										<h3>Agregamos solo el archivo index.html o el nombre del archivo que usemos.</h3>
+												<code>git add index.html</code>
+									<!--
+									<h3><a href="http://jmpressjs.github.com/docs/pluginsecondary.html" target="_blank">secondary animations</a></h3>
+									<pre class="offset1 span5">$.jmpress('apply', '#secondary', {
+					    secondary: {
+					        rotate: { z: 20, x: 20, y:20 },
+					        '': 'self'
+					    }
+					});</pre>
+									<h4 class="offset4"><a href="http://jmpressjs.github.com/docs/pluginsecondary.html" target="_blank">read more about the secondard plugin</a></h4> -->
 			</section>
-			<!-- TEST Continuar 1 -->
+
 			<section id="test1">
 				<code>git commit -m "mensaje"</code>
 				<h3>Realizamos el commit con los archivos seleccionados.</h3>
 			</section>
 
-			<!-- TEST Continuar 2 -->
 			<section id="test2">
 				<code>git log</code>
 				<h3>Nos dice como está el repositorio a nivel de commits (Cuantos commits tenemos en el repositorio), quien las hizo, cuando las hizo y básicamente todo.</h3>
 			</section>
 
-			<!-- TEST Continuar 3 -->
 			<section id="test3">
 				<code>git log > commits.txt</code>
 				<h3>Genera un .txt con los commits en la raíz del proyecto.</h3>
 			</section>
 
-			<!-- TEST Continuar 4 -->
 			<section id="test4">
 				<code>git checkout</code>
 				<h3>Con este comando viajamos a travez del tiempo, y podemos ir a cualquier commit.</h3>
@@ -293,29 +272,36 @@ $('#jmpress').jmpress({
 				<code>Master -> rama principal</code>
 			</section>
 
-			<!-- TEST Continuar 5 -->
 			<section id="test5">
 				<code>git reset</code>
-				<h3>Este comando es súper poderoso y ten cuidado con usarlo, hace lo mismo que git checkout a diferencia que arrasa con todos los commits que tiene enfrente.
-Tiene tres tipos de ejeción:</h3>
-			<ul>
-				<li>git reset --soft</li>
-				<p>Es un reset tranquilo, tu Working Area lo deja, no se mete con tú código.</p>
-				<li>git reset --mixed</li>
-				<p>Este reset es raro y muy poco usado, borra tu Staging Area sin tocar tu Working Area</p>
-				<li>git reset --hard</li>
-				<p>Este comando lo que dice es ¡Hey quiero borrar todo! y en efecto eso es lo que hace, inluyendo tu código que estas editando en tu working area ( sublimetext ).</p>
+					<h3>Este comando es súper poderoso y ten cuidado con usarlo, hace lo mismo que git checkout a diferencia que arrasa con todos los commits que tiene enfrente. Tiene tres tipos de ejeción:</h3>
+							<ul>
+								<li>git reset --soft</li>
+								<p>Es un reset tranquilo, tu Working Area lo deja, no se mete con tú código.</p>
+								<li>git reset --mixed</li>
+								<p>Este reset es raro y muy poco usado, borra tu Staging Area sin tocar tu Working Area</p>
+								<li>git reset --hard</li>
+								<p>Este comando lo que dice es ¡Hey quiero borrar todo! y en efecto eso es lo que hace, inluyendo tu código que estas editando en tu working area ( sublimetext ).</p>
+							</ul>
 			</section>
 
 		</section>
 
-		<!-- EXAMPLES -->
 		<section id="examples" data-x="-1350" data-y="-1000" data-scale="1">
 			<h1>CLASE 2</h1>
 				<h3>Ramas y Fusiones</h3>
 		</section>
 
-		<!-- Clase 2 -->
+		<!--
+		#############################################
+		#																						#
+		#																						#
+		#   3. Clase 2															#
+		#																						#
+		#																						#
+		#############################################
+		-->
+
 		<section id="clase2" data-x="-1650" data-y="-1500" data-scale="1">
 			<h2>RAMAS</h2>
 				<h3>Una rama es una línea del tiempo en la historia de nuestro repositorio, funciona para crear features, arreglar bugs, experimentar, etc. Sin afectar la versión estable.</h3>
@@ -425,7 +411,15 @@ Tiene tres tipos de ejeción:</h3>
 		</section>
 
 
-		<!-- Clase 3 -->
+		<!--
+		#############################################
+		#																						#
+		#																						#
+		#   4. Clase 3															#
+		#																						#
+		#																						#
+		#############################################
+		-->
 		<section id="clase3" data-x="-4580" data-y="-4500" data-scale="1">
 			<h2>Clase 3</h2>
 				<h3>Workflows y Colaboración Remota</h3>
