@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 268.5 70.5" enable-background="new 0 0 268.5 70.5" xml:space="preserve">
+<g>
+	<ellipse fill="none" stroke="#B73325" stroke-width="2" cx="83.2" cy="33.4" rx="3.6" ry="3.6"/>
+	<ellipse fill="none" stroke="#B73325" stroke-width="2" cx="133.4" cy="33.4" rx="3.6" ry="3.6"/>
+	<ellipse fill="none" stroke="#B73325" stroke-width="2" cx="183.6" cy="33.4" rx="3.6" ry="3.6"/>
+	<ellipse fill="none" stroke="#B73325" stroke-width="2" cx="223.9" cy="54.9" rx="3.6" ry="3.6"/>
+	<text transform="matrix(1.0051 0 0 1 66.4169 24.7163)" font-family="'MyriadPro-Regular'" font-size="7.9693">Commit A</text>
+	<text transform="matrix(1.0051 0 0 1 118.852 24.3306)" font-family="'MyriadPro-Regular'" font-size="7.9693">Commit B</text>
+	<text transform="matrix(1.0051 0 0 1 167.9384 23.9487)" font-family="'MyriadPro-Regular'" font-size="7.9693">Commit C</text>
+	<text transform="matrix(1.0051 0 0 1 224.8603 46.0596)" font-family="'MyriadPro-Regular'" font-size="7.9693">Commit X</text>
+	<line stroke="#000000" x1="93.2" y1="33.4" x2="123.4" y2="33.4"/>
+	<line stroke="#000000" x1="143.4" y1="33.4" x2="173.6" y2="33.4"/>
+	<line stroke="#000000" x1="190.7" y1="37.4" x2="216.8" y2="52.4"/>
+	<text transform="matrix(1.0051 0 0 1 12.9741 36.7925)" font-family="'MyriadPro-Regular'" font-size="9.4742">Rama Master</text>
+	<text transform="matrix(1.0051 0 0 1 13.2602 57.2744)" font-family="'MyriadPro-Regular'" font-size="9.4742">Rama Experimento</text>
+</g>
+</svg>
