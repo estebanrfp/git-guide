@@ -98,31 +98,33 @@
 			<h2>CONFIGURACIÓN</h2>
 			<h3>Definimos Nombre y Correo de manera Global.</h3>
 			<ul>
-				<li><code>git config --global user.name "Tu nombre"</code></li>
-				<li><code>git config --global user.email "Tu correo"</code></li>
+				<li><code class="menos">git config --global user.name "Tu nombre"</code></li>
+				<li><code class="menos">git config --global user.email "Tu correo"</code></li>
 			</ul>
 			</div>
 			<section id="templating">
-				<h2>Activamos la interfaz de colores</h2>
-				<code>git config --global user.ui true" (default / true)</code>
+				<h2>Activamos la interfaz de colores.</h2>
+				<code>git config --global color.ui true</code>
 			</section>
 
 			<section id="nested">
-				<h1>Listamos nuestra configuración global.</h1>
-				<code>git config --global --list"</code>
+				<h2>Listamos nuestra configuración global.</h2>
+				<code>git config --global --list</code>
 
 				
 
 			</section>
 
 			<section id="ajax">
-				<code>git --help comando.</code>
-				<h2>Comando que se utiliza para saber como funciona cada instrucción de git, al igual que da una breve explicacíon de dicha instrucción.</h2>
+				<h2>Ayuda general o sobre un comando.</h2>
+				<code class="menos">git --help </code><br />
+				<code class="menos">git --help < nombre del comando. ></code>
+
 			</section>
 
 			<section id="controls">
+				<h2>Iniciar Git en una carpeta</h2>
 				<code>git init</code>
-					<h2>Inicia el tracking de nuestra carpeta</h2>
 										<!--
 										<h4 class="offset1">Map any key to an action in jmpress.js, <a href="http://jmpressjs.github.com/docs/keyboard.html" target="_blank">read more</a>.</h4>
 										<pre class="offset1 span7 pull-left">// bind the 'o' key to select a step with the id 'overview'
@@ -135,9 +137,9 @@
 						});</pre> -->
 			</section>
 
-			<section id="routing">
+			<section id="routing">					
+				<h2>Estado en el que se encuentra nuestro proyecto</h2>
 				<code>git status</code>
-					<h2>Estado en el que se encuentra nuestro proyecto</h2>
 									<!--
 									<h3 class="offset1"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">routing</a></h3>
 									<pre class="offset1 span5">$('#jmpress').jmpress('route', [
