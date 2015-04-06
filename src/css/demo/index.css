@@ -1,3 +1,4 @@
+
 /**
  * This is a demo stylesheet for jmpress.js
  * It is not meant to be a part of jmpress.js and is not required by jmpress.js.
@@ -83,11 +84,13 @@ h5 { font-size: 40%; }
 p { font-size: 60%; }
 sup { font-size: 40%; vertical-align: top; }
 code {
-	font-family: monospace;
+	color: #B83526;
+	font-family: Consolas, monospace;
+	font-size: 1.1rem;
 	font-weight: normal;
-	background-color: #ddd;
+	/*background-color: #ddd;
 	border-radius: 5px;
-	border: 1px solid #aaa;
+	border: 1px solid #aaa;*/
 	padding: 3px;
 }
 pre {
@@ -563,7 +566,7 @@ section:not(.active) {
 	box-shadow:         3px 3px 0px #333;
 }
 .nested-step {
-	width: 825px;
+	width: 725px;
 }
 .nested-step a {
 	background-color: #bbb;
