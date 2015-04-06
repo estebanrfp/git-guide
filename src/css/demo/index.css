@@ -81,8 +81,14 @@ h2 { font-size: 120%; }
 h3 { font-size: 80%; }
 h4 { font-size: 60%; clear: both; }
 h5 { font-size: 40%; }
-p { font-size: 60%; }
+p { font-size: 70%; }
 li { font-size: 80%; }
+span.bullet {
+	color: #B83526;
+	/*background: #B83526;*/
+	/*padding: .2rem;*/
+
+}
 strong {color: #B83526;}
 sup { font-size: 40%; vertical-align: top; }
 code {
