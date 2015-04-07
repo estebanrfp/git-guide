@@ -98,17 +98,17 @@
 			<h2>CONFIGURACIÓN</h2>
 			<h3>Definimos Nombre y Correo de manera Global.</h3>
 			<ul>
-				<li><code class="menos">git config --global user.name "Tu nombre"</code></li>
-				<li><code class="menos">git config --global user.email "Tu correo"</code></li>
+				<li><code >git config --global user.name "Tu nombre"</code></li>
+				<li><code >git config --global user.email "Tu correo"</code></li>
 			</ul>
 			</div>
 			<section id="templating">
-				<h2>Activamos la interfaz de colores.</h2>
+				<h3>Activamos la interfaz de colores.</h3>
 				<code>git config --global color.ui true</code>
 			</section>
 
 			<section id="nested">
-				<h2>Listamos nuestra configuración global.</h2>
+				<h3>Listamos nuestra configuración global.</h3>
 				<code>git config --global --list</code>
 
 				
@@ -116,15 +116,15 @@
 			</section>
 
 			<section id="ajax">
-				<h2>Ayuda general o sobre un comando.</h2>
-				<code class="menos">git --help </code><br />
-				<code class="menos">git --help < nombre del comando. ></code>
+				<h3>Ayuda general o sobre un comando.</h3>
+				<code >git --help </code><br />
+				<code >git --help < nombre del comando. ></code>
 
 			</section>
 
 			<section id="controls">
 				<h3>Iniciar Git en una carpeta</h3>
-				<code class="menos">git init</code>
+				<code >git init</code>
 										<!--
 										<h4 class="offset1">Map any key to an action in jmpress.js, <a href="http://jmpressjs.github.com/docs/keyboard.html" target="_blank">read more</a>.</h4>
 										<pre class="offset1 span7 pull-left">// bind the 'o' key to select a step with the id 'overview'
@@ -139,7 +139,7 @@
 
 			<section id="routing">					
 				<h3>Estado en el que se encuentra nuestro proyecto</h3>
-				<code class="menos">git status</code>
+				<code >git status</code>
 									<!--
 									<h3 class="offset1"><a href="http://jmpressjs.github.com/docs/ways.html" target="_blank">routing</a></h3>
 									<pre class="offset1 span5">$('#jmpress').jmpress('route', [
@@ -150,7 +150,7 @@
 
 			<section id="secondary">				
 				<h3>Agregamos al staging area todos los archivos.</h3>
-				<code class="menos">git add -A</code>
+				<code >git add -A</code>
 				
 									<!--
 									<h3><a href="http://jmpressjs.github.com/docs/pluginsecondary.html" target="_blank">secondary animations</a></h3>
@@ -165,7 +165,7 @@
 
 			<section id="test1">
 				<h3>Hacemos un commit con su descripción.</h3>
-				<code class="menos">git commit -m "mensaje"</code>
+				<code >git commit -m "mensaje"</code>
 			</section>
 
 			<section id="test2">				
@@ -175,29 +175,27 @@
 			</section>
 
 			<section id="test3">
+				<h3>Generar un informe de los commits en un archivo .txt. Nos permite recuperar commits borrados.</h3>
 				<code>git log > commits.txt</code>
-				<h2>Genera un .txt con los commits en la raíz del proyecto.</h2>
+
 			</section>
 
 			<section id="test4">
-				<code>git checkout</code>
-				<h3>Con este comando viajamos a travez del tiempo, y podemos ir a cualquier commit.</h3>
-				<h3>Si hacemos un cambio a algún proyecto que tienes atrás, crearás dos mundos paralelos</h3>
-				<code>git checkout commit</code>
-				<code>git checkout master</code>
-				<code>Master -> rama principal</code>
+				<h3>Volver al estado del proyecto cuando se hizo cualquier commit.</h3>
+				<code>git checkout < número de commit ></code>
+			
 			</section>
 
 			<section id="test5">
-				<code>git reset</code>
-					<h2>Este comando es súper poderoso y ten cuidado con usarlo, hace lo mismo que git checkout a diferencia que arrasa con todos los commits que tiene enfrente. Tiene tres tipos de ejeción:</h2>
+					<h3>Borrar todo desde el commit actual al commit que le indiquemos.</h3>
+					<p><Existen tres tipos:</p>
 							<ul>
-								<li>git reset --soft</li>
-								<p>Es un reset tranquilo, tu Working Area lo deja, no se mete con tú código.</p>
-								<li>git reset --mixed</li>
-								<p>Este reset es raro y muy poco usado, borra tu Staging Area sin tocar tu Working Area</p>
-								<li>git reset --hard</li>
-								<p>Este comando lo que dice es ¡Hey quiero borrar todo! y en efecto eso es lo que hace, inluyendo tu código que estas editando en tu working area ( sublimetext ).</p>
+								<code> git reset --soft < número de commit > </code>
+								<p>No borra nada del Working Area</p>
+								<code>git reset --mixed < número de commit > </code>
+								<p>Borra el Staging Area sin tocar el Working Area</p>
+								<code>git reset --hard < número de commit > </code>
+								<p>Borra todo en todas las áreas</p>
 							</ul>
 			</section>
 
