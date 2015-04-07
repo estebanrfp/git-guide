@@ -238,87 +238,73 @@
 
 		</section>
 
-		<section id="clase2" data-x="-900" data-y="3600" data-scale="1">
-			<h1>Extra</h1>
+		<section id="clase2" data-x="-900" data-y="3600" data-scale="1">			
 			<h3>Para eliminar una rama se usa el comando:</h3>
-				<code>git branch -d nombre de la rama</code>
+			<code>git branch -d nombre de la rama</code>
 		</section>
 
 		<section id="clase2" data-x="-2050" data-y="4100" data-scale="1">
-			<h1>CONCEPTO HEAD</h1>
-			<h3>Es la forma en que nos movemos de un punto a otro (commit), Nuestro HEAD es el punto en donde nos encontramos.</h3>
+			<h3>CONCEPTO HEAD</h3>
+			<p>Es la forma en que nos movemos de un punto a otro (commit), Nuestro HEAD es el punto en donde nos encontramos.</p>
 		</section>
 
 		<section id="clase2" data-x="-2500" data-y="4600" data-scale="1">
-			<h1>FUSIONES</h1>
-			<h3>Es la creación de un nuevo commit que vincule una de nuestras ramas, con alguna otra rama , dando como resultado un nuevo commit.</h3><br />
+			<h3>FUSIONES</h3>
+			<p>Es unir dos ramas generando un nuevo commit.</p><br />
 			<figure><img src="img/fusion.svg" width="650" alt=""></figure>
 
 		</section>
 
 		<section id="clase2" data-x="-2750" data-y="5100" data-scale="1">
-			<h1>Para hacer una fusión tenemos que seguir 2 pasos:</h1>
-			<ul>
-				<li>Situarnos en la línea que va a absorber.</li>
-				<li>Fusionar</li>
+			<h3>Para hacer una fusión realizamos 2 pasos:</h3>
+			
 		</section>
 
 		<section id="clase2" data-x="-1650" data-y="5600" data-scale="1">
-			<h1>1. Situarnos en la línea que va a absorber.</h1>
-			<h3>Es la línea que absorbera la rama que nosotros deseamos, en este caso será experimental. Lo logramos hacer con el comando antes visto checkout</h3>
-			<code>git checkout nombre de la rama</code>
+			<h3>1. Situarnos en la línea (rama) que va a absorber.</h3>		
+			<code>git checkout < nombre de la rama ></code>
 		</section>
 
-		<section id="clase2" data-x="-1650" data-y="6000" data-scale="1">
-			<h1>2. Fusionar</h1>
-			<h3>Aquí es cuando nuestra línea que absorbe toma a la línea experimental y nos dá nuestro nuevo commit.</h3>
-			<br />
+		<section id="clase2" data-x="-1650" data-y="6100" data-scale="1">
+			<h3>2. Fusionar</h3>
+			<p>Aquí es cuando la línea en la que estamos situados absorbe la rama que deseamos fusionar creando un nuevo commit.</p>
+			<code>git merge < nombre de la rama ></code>
+
+		<section id="clase2" data-x="-2650" data-y="6600" data-scale="1">
 			<h3>Cuando se hace la fusión nos pueden dar 2 resultados diferentes:</h3>
-			<ul>
-				<li>Fast-Forward -> Todo lindo y hermoso.</li>
-				<li>Manual Merge -> Todo feo y horrible.</li>
-			</ul>
 		</section>
 
-		<section id="clase2" data-x="-2650" data-y="6500" data-scale="1">
-			<h1>Fast-Forwardr</h1>
-			<h3>Simplemente hará la fusión sin preguntar nada, es cuando los gestores trabajan archivos diferentes al repositorio</h3>
+		<section id="clase2" data-x="-750" data-y="7100" data-scale="1">		
+			<h3>Fast-Forward.</h3>
+			<p>Hace la fusión automaticamente porque las ramas fusionadas han sido trabajadas en áreas o archivos diferentes. No se enciman.</p>
+			<h3>Ejemplo:</h3>		
+			<p>Esteban Fuster Pozzi -> index.html</p>
+			<p>Miguel Nieva -> styles.css</p>							
 		</section>
 
-		<section id="clase2" data-x="-750" data-y="7000" data-scale="1">
-			<h3>Cuando se hace la fusión nos pueden dar 2 resultados diferentes:</h3>
-			<h3>Ejemplo:</h3>
-			<ul>
-				<li>Esteban Fuster Pozzi -> index.html</li>
-				<li>Miguel Nieva -> styles.css</li>
-			</ul>
-		</section>
+		<section id="clase2" data-x="-2650" data-y="7600" data-scale="1">
+			<h3>Manual Merge</h3>
+			<p>Las ramas fusionadas han sido trabajadas en las mismas áreas de un mismo archivo.</p>
+			<h3>Resultado:</h3>
+			<p>Esteban Fuster Pozzi -> index.html</p>
+			<p>Miguel Nieva -> index.html</p><br />
+			<p><span class="bullet">&bull;</span>Nos tocará decidir y escoger manualmente el código que quedará estable.</p>
+		</section>	
 
-		<section id="clase2" data-x="-2150" data-y="7500" data-scale="1">
-			<h1>Manual Merge</h1>
-			<h3>Es cuando dos desarrolladores o tú trabajan sobre el mismo archivo en la fusión</h3>
-			<ul>
-				<li>Esteban Fuster Pozzi -> index.html</li>
-				<li>Miguel Nieva -> index.html</li>
-			</ul>
-		</section>
-
-		<section id="clase2" data-x="-2150" data-y="8000" data-scale="1">
+		<section id="clase2" data-x="-2150" data-y="8100" data-scale="1">
 			<h1>GIT LOG & ALIASES</h1>
 		</section>
 
-		<section id="clase2" data-x="-2150" data-y="8500" data-scale="1">
-			<h3>En la terminal podemos igual ver como esta avanzando el proyecto, con el comando git log, de esta forma visualizaremos de forma simple y sintetizada el dibujo de las ramas.</h3>
-			<h3>El comando es:</h3>
+		<section id="clase2" data-x="-2150" data-y="8600" data-scale="1">
+			<h3>En la terminal podemos igual ver como esta avanzando el proyecto, con el comando git log, de esta forma visualizaremos de forma simple y sintetizada el dibujo de las ramas.</h3>			
 			<code>git log --oneline --graph --all</code>
 		</section>
 
-		<section id="clase2" data-x="-2150" data-y="9000" data-scale="1">
-			<h3>Sabemos que es un comando largo y da pereza, para eso existen los aliases los cuales hacen que no tengamos que escribir todo, es poder poner nuestros comandos git como queramos con el nombre que sea.</h3>
-			<code>git config --global alias.filigit '--oneline --graph --all'</code>
-			<h3>Ahora simplemente para usarlo hacemos lo siguiente:</h3>
-			<code>git log filigit</code>
-			<code>this it ie jeud dju idj cno his is a thest hthe sjjss </code>
+		<section id="clase2" data-x="-2150" data-y="9100" data-scale="1">
+			<h3>Para comandos largos como este existen los aliases para poder reemplazarlos por un nombre pripio que elijamos.</h3>
+			<code>git config --global alias.pepito '--oneline --graph --all'</code>
+			<h3>Ahora para usarlo escribimos:</h3>
+			<code>git log pepito</code>
 		</section>
 		<!--
 		#############################################
