@@ -85,7 +85,10 @@ h3 { font-size: 90%; }
 h4 { font-size: 60%; clear: both; }
 h5 { font-size: 40%; }
 p { font-size: 70%; }
-li { font-size: 80%; }
+li { 
+	font-size: 80%;
+	list-style: none;
+ }
 span.bullet {
 	color: #B83526;
 	/*background: #B83526;*/
