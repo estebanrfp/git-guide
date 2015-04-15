@@ -914,7 +914,7 @@
 			<h2>De esta forma logramos conectar el servidor con Github.</h2>
 		</section>
 
-		<!-- Proyecto -->
+		<!-- SUB-PROYECTO -->
 
 		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
 			<h1>Antes de empezar con lo siguiente tenemos que lograr conectar el Local Repository con Github vía SSH</h1>
@@ -992,13 +992,75 @@
 			</ul>
 		</section>
 
+		<!-- DEPLOY TOTAL EN SERVER -->
 
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h1>DEPLOY TOTAL EN SERVER</h1>
+		</section>
 
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90" data-template="stepper">
+			<h2>Si por alguna circustancia extrema, no podemos usar Github, existen los "bare respositories", que no son más que repositorios limpios, envian y reciben contenido.</h2>
+			<h2>Un bare repository unicamente guarda el historial de cambios, con todos sus archivos, pero no puedes editarlos.</h2>
+			<ul>
+				<li data-jmpress="drive-left after 600ms"><h2><span class="bullet">&bull;</span> UN REPOSITORIO BARE ¡jamás se toca!</h2></li>
+			</ul>
+		</section>
 
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90" data-template="stepper">
+			<h2>Primero creamos nuestras dos carpetas o aplicaciones en servidor.</h2>
+			<ul>
+				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> gitcentral</h2></li>
+				<h2>Guarda todos nuestros repositorios "bare" y solo va a recibir/enviar información.</h2>
+				<li data-jmpress="drive-left after 800ms"><h2><span class="bullet">&bull;</span> deployserver</h2></li>
+				<h2>Mostrara nuestro resultado, ya pasando por el "bare".</h2>
+		</section>
 
- <!-- EN CONSTRUCCION -->
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h2>Entramos a nuestro servidor via SHH (Ya sabemos como) y borramos los index.html que tienen.</h2>
+			<h2>Ahora lo se hara es lo siguiente: normal repository (local) suba cambios al bare repository y que normal repository (server) reciba esos cambios.</h2>
+		</section>
 
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h1>LOCAL</h1>
+			<h2>Creamos nuestra carpeta y un archivo index.html</h2>
+			<code>mkdir proyecto</code>
+			<code>touch index.html</code>
+			<h2>Editamos nuestro index</h2>
+			<code>vim index.html</code>
+			<h2>Creamos el commit</h2>
+			<code>git init</code>
+			<code>git status</code>
+			<code>git add -A</code>
+			<code>git commit -m "Commit 1"</code>
+		</section>
 
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h1>Servidor (Bare repository)</h1>
+			<h2>Entramos al servidor vía SSH y nos movemos hasta la carpeta</h2>
+			<code>ssh info@evercoders.com</code>
+			<code>cd/webapps/gitcentral</code>
+			<h2>Ejecutamos git init</h2>
+			<code>git init --bare --share</code>
+			<code>--bare -> Porque este repositorio va a ser un "bare".</code>
+			<code>--share -> Para que lo puedan pushear diferentes usuarios.</code>
+		</section>
+
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h1>Local</h1>
+			<h2>Ahora tenemos que subirlo al servidor directamente, y mandamos cambios:</h2>
+			<code>git remote add origin</code>
+			<code>info@evercoders.com:home/goku/webapps/gitcentral</code>
+			<code>git push origin master</code>
+		</section>
+
+		<section id="clase8" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h1>Servidor (normal repository)</h1>
+			<code>git init</code>
+			<code>git remote add origin ../gitcentral</code>
+			<code>git pulls origin master</code>
+		</section>
+
+		<!-- Fin -->
 	</article>
 
 <script type="text/javascript">
