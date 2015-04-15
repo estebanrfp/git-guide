@@ -650,10 +650,10 @@
 			<h2>Ahora si ya podemos trabajar y hacer el deployment</h2></br ></br >
 			<h2>Como trabajar en un proyecto dia a dia:</h2>
 			<ul>
-				<li data-jmpress="drive-left after 500ms"><h2><span class="bullet">&bull;</span> git status</h2></li>
-				<li data-jmpress="drive-left after 500ms"><h2><span class="bullet">&bull;</span> git add -A</h2></li>
-				<li data-jmpress="drive-left after 500ms"><h2><span class="bullet">&bull;</span> git commit -m "Mensaje"</h2></li>
-				<li data-jmpress="drive-left after 500ms"><h2><span class="bullet">&bull;</span> git push origin gh-pages</h2></li>
+				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> git status</h2></li>
+				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> git add -A</h2></li>
+				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> git commit -m "Mensaje"</h2></li>
+				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> git push origin gh-pages</h2></li>
 			</ul>
 		</section>
 
@@ -661,6 +661,156 @@
 
 		<section id="clase7" data-x="6600" data-y="18000" data-scale="1">
 			<h1>MANUAL DEPLOYMENT</h1>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="18500" data-scale="1">
+			<h2>Bueno primero tenemos que dejar en claro que remote repository (Github) es un servidor, cuando nos conectamos a un servidor este mismo puede conectarse con otro servidor.</h2>
+			<h2>Esto se le conoce como infraestructura de servidores.</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="19000" data-scale="1">
+			<h2>LOCAL REPOSITORY (Development) -> REMOTE REPOSITORY (central) -> REMOTE REPOSITORY (production)</h2>
+			<h1> => CREAR IMAGEN AQUI :P <= </h1>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="19500" data-scale="1">
+			<h2>La forma correcta de autenticación es con SSH, esto dice ¿eres tu el propetario de estos tres ambientes?.</h2>
+			<h2>Si nosotros tenemos la llave nosotros podemos entrar a todos los candados, es decir los diferentes repositorios o servidores.</h2>
+			<h2>Eso basicamente es deployment</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="20000" data-scale="1">
+			<h2>Ahora lo que tenemos que hacer es que a ese dominio o aplicación que acabamos de crear generar un repositorio con nuestra amiga la terminal.</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="20500" data-scale="1">
+			<h2>Entramos remotamente desde la terminal al servidor.</h2>
+			<code>ssh ubuntu@evercoders.com</code>
+			<h2>Recuerda que la dirección SSH varia segun tu servidor.</h2>
+			<h2>Nos dara la dirección para entrar de forma remota, esto igual depende del servidor, pero siempre nos la tiene que dar.</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="21000" data-scale="1">
+			<h2>Ponemos nuestra contraseña, puede ser la misma o distinta a key que usamos con github.</h2>
+			<h2>Una vez hecho esto, ya estamos conectados de forma remota a travez de SSH</h2>
+			<h2>Ahora tenemos que conectar la llave SSH que tenemos al servidor pero desde github y que no tenga ningun problema para mandarse información.</h2>
+			<h2>Esto lo logramos con:</h2>
+			<code>ssh-keygen</code>
+			<h2>Nuevamente nos genera una llave publica y privada</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="21500" data-scale="1">
+			<h2>Entramos a la llave publica y nuevamente copiamos el código encriptado.</h2>
+			<h2>Para obtener el código recuerda usar:</h2>
+			<code>cat id_rsa.pub</code>
+			<h2>Vamos a Github.com y luego a nuestro repositorio / Settings / SSH keys / Add SSH Key</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="22000" data-scale="1">
+			<h2>Nos pedira un título y una llave, el título puede ser el que sea, pero en la llave pondremos lo que copiamos en la terminal (Servidor).</h2>
+			<h2>Por ultimo damos click en Add key</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="22500" data-scale="1">
+			<h2>¡Bien!, ya generamos una llave publica ahora con el servidor.</h2>
+			<h2>Recordar que estamos conectados a un servidor externo y no a nuestro PC.</h2>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="23000" data-template="stepper" data-scale="1">
+			<h2>Empecemos a conectar Github con nuestro servidor, regularmente tenemos comandos de git, en caso de que no tengamos git en el servidor, tenemos dos opciones:</h2>
+			<ul>
+				<li data-jmpress="drive-left after 300ms"><h2><span class="bullet">&bull;</span> Que el proveedor nos los active.</h2></li>
+				<li data-jmpress="drive-left after 400ms"><h2><span class="bullet">&bull;</span> Nosotros los instalemos.</h2></li>
+			</ul>
+		</section>
+
+		<section id="clase7" data-x="6600" data-y="23500" data-scale="1">
+			<h2>Ahora si podemos empezar a traer el proyecto desde github.</h2>
+			<h2>git init</h2>
+			<h2>git remote add origin [SSH]</h2>
+			<h2>git pull origin master</h2>
+		</section>
+
+		<!-- ISSUES -->
+
+		<section id="clase7" data-x="8000" data-y="24000" data-scale="1" data-rotate="90">
+			<h1>ISSUES</h1>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="23000" data-scale="1" data-rotate="90">
+			<h2>Los issues es una forma de dar seguimiento, mejorar o resolver un error de nuestros proyectos.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="22000" data-scale="1" data-rotate="90">
+			<h1>Crear un Issue</h1>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="21000" data-scale="1" data-rotate="90">
+			<h2>Para crear un issue tenemos que ir a nuestro repositorio en Github / settings y en la parte de Features activamos Issues.</h2>
+			<h2>Una vez hecho esto en la parte derecha nos saldra un nuevo icono, damos click.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="20000" data-scale="1" data-rotate="90">
+			<h2>Ahora damos click en New Issue, aquí es donde elegimos un título y una pequeña descripción de lo que se debe de hacer.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="19000" data-scale="1" data-rotate="90">
+			<h2>En el issue hay una parte que dice No one is assigned que básicamente es: No has asignado el issue a nadie así que damos click en el engrane y seleccionamos a alguien incluso podemos a nosotros mismos.</h2>
+			<h2>De esta forma la persona que seleccionamos es la que tiene que hacerse cargo de ese issue.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="18000" data-scale="1" data-rotate="90">
+			<h2>Ya que tenemos todo esto damos click en:</h2>
+			<h2>Submit new issue</h2>
+			<h2>Ahora esta nuestro issue creado, y podemos hacer aun más...</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="17000" data-scale="1" data-rotate="90">
+			<h2>Si entramos al issue podemos tener conversaciones con el equipo acerca de lo que pasa, poner imagenes o finalmente cerrar el issue porque se resolvio.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="16000" data-scale="1" data-rotate="90">
+			<h2>Que pasa si tenemos una gran cantidad de issues, es posible que sea dificil encontrarlos, para eso tenemos:</h2>
+			<h2>Milestones</h2>
+			<h2>Labels</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="15000" data-scale="1" data-rotate="90">
+			<h2>Son grupos de issues que corresponden a un proyecto, característica, o periodo de tiempo.</h2>
+			<h2>Ejemplo</h2>
+			<h3>Issues de Betas</h3>
+			<h3>Issues para Enero</h3>
+			<h3>Issues para Rediseño</h3>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="14000" data-scale="1" data-rotate="90">
+			<h2>Para crearlos solo tenemos que ir a Milestone</h2>
+			<h2>Damos click en el boton de New milestone</h2>
+			<h2>Labels</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="13000" data-scale="1" data-rotate="90">
+			<h2>Como podemos tenemos que asignar un título, una descripción y una fecha de vencimiento (opcional), hecho esto, damos en create milestone.</h2>
+			<h2>Ahora cuando creamos un issue podemos meterlo dentro de un milestone, de esta forma podemos llevar el control.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="12000" data-scale="1" data-rotate="90">
+			<h1>Labels (etiquetas)</h1>
+			<h2>Son una gran manera de organizar diferentes tipos de problemas. Los problemas pueden tener todas los labels que sean y se pueden filtrar por una o varias labels a la vez.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="11000" data-scale="1" data-rotate="90">
+			<h2>Git nos proporciona algunos labels por defecto pero igual nosotros podemos crear los nuestros.</h2>
+			<h2>Damos click en New label, asignamos un nombre y un color, finalmente damos click en Create label.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="10000" data-scale="1" data-rotate="90">
+			<h2>Así de sensillo es crear labels!!</h2>
+			<h2>Podemos asignarlos a nuestros issues y tener una buena organización.</h2>
+		</section>
+
+		<section id="clase7" data-x="8000" data-y="9000" data-scale="1" data-rotate="90">
+			<h2>Para mas informacion puedes visitar la documentacion de github <a href="https://guides.github.com/features/issues/">aqui</a></h2>
 		</section>
 
 
