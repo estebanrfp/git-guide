@@ -35,9 +35,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-figure {
-	text-align: center;
-}
+
 html {
 	width: 100%;
 }
