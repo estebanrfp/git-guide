@@ -1056,7 +1056,7 @@
 		#############################################
 		#																						#
 		#																						#
-		#   7. Deploy automático de repositorios bare															#
+		#   7. Ejemplo de deploy automático de repositorios bare															#
 		#																						#
 		#																						#
 		#############################################
@@ -1066,6 +1066,21 @@
 			<code>cd ../gitcentral/hooks</code>
 			<code>touch post-receive</code>
 			<code>chmod +x post-receive</code>
+			<h1>post-receive situado en /webapps/gitcentral/hooks</h1>
+			<p>
+			#!/bin/bash
+			cd ../deployserver || exit
+			unset GIT_DIR
+			git pull origin master
+
+			ó
+
+			#!/bin/bash
+			cd /home/ubuntu/webapps/deployserver || exit
+			unset GIT_DIR
+			git pull origin master
+			</p>
+
 		</section>
 
 		<!-- Fin -->
