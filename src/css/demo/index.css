@@ -522,8 +522,7 @@ section:not(.active) {
 /* ==========================================================================
    DEVELOPER
    ========================================================================== */
-#developer section {
-	border-bottom: 1px dashed #c7d7e7;
+#developer section {	
 	width: 750px;
 }
 #secondary {
