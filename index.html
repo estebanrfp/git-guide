@@ -574,7 +574,7 @@
 
 		<section id="clase7" data-x="6100" data-y="13000" data-scale="1">
 			<h3>CONECTAR POR SSH</h3>
-			<p>SSH es una forma segura de conectar con Github a diferencia de HTTP y con la posibilidad de evitar el uso de contraseña.</p>
+			<p>SSH es una forma segura de conectar con Github, diferente de HTTP y con la posibilidad de evitar el uso de contraseña.</p>
 		</section>
 
 		
@@ -616,20 +616,19 @@
 		</section>
 
 		<section id="clase7" data-x="6100" data-y="16500" data-scale="1">
-			<h3>Hacemos un git pull (fetch + merch) a la rama master</h3>
+			<p>Hacemos un git pull (fetch + merch) a la rama master</p>
 			<code>git pull origin master</code>
-			<h3>Pero como estamos trabajando con github pages usamos:</h3>
+			<p>Pero como estamos trabajando con github pages usamos:</p>
 			<code>git pull origin gh-pages</code>
 		</section>
 
 		<section id="clase7" data-x="6100" data-y="17000" data-scale="1">
-			<h3>Por ahora no aparece la rama gh-pages ya que esta oculta, para empezar a usarla:</h3>
+			<p>Por ahora no aparece la rama gh-pages ya que esta oculta, para empezar a usarla:</p>
 			<code>git checkout gh-pages</code>
 		</section>
 
 		<section id="clase7" data-x="6100" data-y="17500" data-template="stepper" data-scale="1">
-			<h2>Ahora si ya podemos trabajar y hacer el deployment</h2></br ></br >
-			<h2>Como trabajar en un proyecto dia a dia:</h2>
+			<h3>Ahora si ya podemos trabajar y hacer el deployment:</h3></br ></br >			
 			<ul>
 				<li data-jmpress="drive-left after 200ms"><h3><span class="bullet">&bull;</span> git status</h3></li>
 				<li data-jmpress="drive-left after 200ms"><h3><span class="bullet">&bull;</span> git add -A</h3></li>
@@ -641,64 +640,59 @@
 		<!-- MANUAL DEPLOYMENT -->
 
 		<section id="clase7" data-x="6600" data-y="18000" data-scale="1">
-			<h1>MANUAL DEPLOYMENT</h1>
+			<h3>MANUAL DEPLOYMENT</h3>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="18500" data-scale="1">
-			<h2>Bueno primero tenemos que dejar en claro que remote repository (Github) es un servidor, cuando nos conectamos a un servidor este mismo puede conectarse con otro servidor.</h2>
-			<h2>Esto se le conoce como infraestructura de servidores.</h2>
+			<p>Dejemos en claro que remote repository (Github) es un servidor, cuando nos conectamos a un servidor este mismo puede conectarse con otro servidor.</p>
+			<pEsto se le conoce como infraestructura de servidores.</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="19000" data-scale="1">
-			<h2>LOCAL REPOSITORY (Development) -> REMOTE REPOSITORY (central) -> REMOTE REPOSITORY (production)</h2>
+			<p>LOCAL REPOSITORY (Development) -> REMOTE REPOSITORY (central) -> REMOTE REPOSITORY (production)</p>
 			<h1> => CREAR IMAGEN AQUI :P <= </h1>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="19500" data-scale="1">
-			<h2>La forma correcta de autenticación es con SSH, esto dice ¿eres tu el propetario de estos tres ambientes?.</h2>
-			<h2>Si nosotros tenemos la llave nosotros podemos entrar a todos los candados, es decir los diferentes repositorios o servidores.</h2>
-			<h2>Eso basicamente es deployment</h2>
-		</section>
-
-		<section id="clase7" data-x="6600" data-y="20000" data-scale="1">
-			<h2>Ahora lo que tenemos que hacer es que a ese dominio o aplicación que acabamos de crear generar un repositorio con nuestra amiga la terminal.</h2>
-		</section>
+			<h3>La forma correcta de autenticación es con SSH.</h3>
+			<p>Si nosotros tenemos la llave y podemos entrar a los diferentes repositorios o servidores.</p>
+			<p>Eso basicamente es deployment.</p>
+		</section>		
 
 		<section id="clase7" data-x="6600" data-y="20500" data-scale="1">
-			<h2>Entramos remotamente desde la terminal al servidor.</h2>
+			<h3>Entramos remotamente desde la terminal al servidor.</h3>
 			<code>ssh ubuntu@evercoders.com</code>
-			<h2>Recuerda que la dirección SSH varia segun tu servidor.</h2>
-			<h2>Nos dara la dirección para entrar de forma remota, esto igual depende del servidor, pero siempre nos la tiene que dar.</h2>
+			<p>Recuerda que la dirección SSH varia según tu servidor.</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="21000" data-scale="1">
-			<h2>Ponemos nuestra contraseña, puede ser la misma o distinta a key que usamos con github.</h2>
-			<h2>Una vez hecho esto, ya estamos conectados de forma remota a travez de SSH</h2>
-			<h2>Ahora tenemos que conectar la llave SSH que tenemos al servidor pero desde github y que no tenga ningun problema para mandarse información.</h2>
-			<h2>Esto lo logramos con:</h2>
+			<h3>Ponemos nuestra contraseña, puede ser la misma o distinta a la key que usamos con Github.</h3>
+			<p>Una vez hecho esto, ya estamos conectados de forma remota a través de SSH.</p>
+			<p>Ahora tenemos que conectar la llave SSH que tenemos al servidor pero desde Github para que sin problemas se envíen la información</p>
+			<h3>Esto lo logramos con:</h3>
 			<code>ssh-keygen</code>
-			<h2>Nuevamente nos genera una llave publica y privada</h2>
+			<p>Nuevamente nos genera una llave publica y privada.</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="21500" data-scale="1">
-			<h2>Entramos a la llave publica y nuevamente copiamos el código encriptado.</h2>
-			<h2>Para obtener el código recuerda usar:</h2>
+			<p>Entramos a la llave publica y nuevamente copiamos el código encriptado.</p>
+			<p>Para obtener el código recuerda usar:</p>
 			<code>cat id_rsa.pub</code>
-			<h2>Vamos a Github.com y luego a nuestro repositorio / Settings / SSH keys / Add SSH Key</h2>
+			<p>Vamos a Github.com y luego a nuestro repositorio / Settings / SSH keys / Add SSH Key</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="22000" data-scale="1">
-			<h2>Nos pedira un título y una llave, el título puede ser el que sea, pero en la llave pondremos lo que copiamos en la terminal (Servidor).</h2>
-			<h2>Por ultimo damos click en Add key</h2>
+			<p>Nos pedira un título y una llave, que la copiamos de la terminal (Servidor).</p>
+			<p>Por ultimo damos click en Add key.</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="22500" data-scale="1">
-			<h2>¡Bien!, ya generamos una llave publica ahora con el servidor.</h2>
-			<h2>Recordar que estamos conectados a un servidor externo y no a nuestro PC.</h2>
+			<p>¡Bien!, ya generamos una llave publica ahora con el servidor.</p>
+			<p>Recordar que estamos conectados a un servidor externo y no a nuestro PC.</p>
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="23000" data-template="stepper" data-scale="1">
-			<h2>Empecemos a conectar Github con nuestro servidor, regularmente tenemos comandos de git, en caso de que no tengamos git en el servidor, tenemos dos opciones:</h2>
+			<h3>Empecemos a conectar Github con nuestro servidor, regularmente tenemos comandos de git, en caso de que no tengamos git en el servidor, tenemos dos opciones:</h3>
 			<ul>
 				<li data-jmpress="drive-left after 300ms"><h2><span class="bullet">&bull;</span> Que el proveedor nos los active.</h2></li>
 				<li data-jmpress="drive-left after 400ms"><h2><span class="bullet">&bull;</span> Nosotros los instalemos.</h2></li>
@@ -706,10 +700,10 @@
 		</section>
 
 		<section id="clase7" data-x="6600" data-y="23500" data-scale="1">
-			<h2>Ahora si podemos empezar a traer el proyecto desde github.</h2>
-			<h2>git init</h2>
-			<h2>git remote add origin [SSH]</h2>
-			<h2>git pull origin master</h2>
+			<h3>Ahora si podemos empezar a traer el proyecto desde Github.</h3>
+			<code>git init</code>
+			<code>git remote add origin [SSH]</code>
+			<code>git pull origin master</code>
 		</section>
 
 		<!-- ISSUES -->
