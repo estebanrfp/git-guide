@@ -1050,24 +1050,49 @@
 		#############################################
 		-->
 		<section id="clase7" data-x="18000" data-y="100" data-scale="1" data-rotate="180">
-			<h1>Deploy automático de repositorios bare</h1>
-			<code>cd ../gitcentral/hooks</code>
-			<code>touch post-receive</code>
-			<code>chmod +x post-receive</code>
-			<h1>post-receive situado en /webapps/gitcentral/hooks</h1>
-			<p>
-			#!/bin/bash
-			cd ../deployserver || exit
-			unset GIT_DIR
-			git pull origin master
+		Deployment total en Servidor
 
-			ó
+		gitcentral (contendrá los bare repository)
+		deployserver ( normal repository )
 
-			#!/bin/bash
-			cd /home/ubuntu/webapps/deployserver || exit
-			unset GIT_DIR
-			git pull origin master
-			</p>
+		preparamos el git central:
+
+		mkdir gitcentral
+		cd gitcentral
+		git init --bare --share
+		git remote add origin ubuntu@54.194.94.13:/home/ubuntu/webapps/gitcentral
+
+		preparamos el repositorio local:
+
+		mkdir deployserver
+		cd deployserver
+		touch index.html ( escribimos dentro “hola mundo”)
+
+		git init
+		git  add -A
+		git commit -m “primer commit”
+
+		git remote add origin ../gitcentral
+
+		Deploy automático de repositorios bare
+
+		cd ../gitcentral/hooks
+		touch post-receive
+		chmod +x post-receive
+
+		post-receive situado en /webapps/gitcentral/hooks
+
+		#!/bin/bash
+		cd ../deployserver || exit
+		unset GIT_DIR
+		git pull origin master
+
+		ó
+
+		#!/bin/bash
+		cd /home/ubuntu/webapps/deployserver || exit
+		unset GIT_DIR
+		git pull origin master
 
 		</section>
 
