@@ -574,49 +574,45 @@
 
 		<section id="clase7" data-x="6100" data-y="13000" data-scale="1">
 			<h3>CONECTAR POR SSH</h3>
+			<p>SSH es una forma segura de conectar con Github a diferencia de HTTP y con la posibilidad de evitar el uso de contraseña.</p>
 		</section>
 
-		<section id="clase7" data-x="6100" data-y="13500" data-scale="1">
-			<h3>SSH es una forma segura de conectar con Github a diferencia de HTTP no pide el usuario y contraseña porque con SSH sabe quien eres tu.</h3>
-		</section>
+		
 
 		<section id="clase7" data-x="6100" data-y="14000" data-scale="1">
-			<h3>Primero hay que generar la llave en la terminal:</h3>
+			<h3>Primero hay que generar la llave en la terminal. En el home:</h3>
 			<code>ssh-keygen</code>
-			<h3>Creara una carpeta .ssh oculta, que por lo general se encuentra en el Home.</h3>
-			<h3>Nota: si este comando no te funciona en windows, descarga: <a href="https://github.com/msysgit/msysgit">msysgit</a></h3>
+			<p>Creara una carpeta .ssh oculta.</p>
+			<p>Nos movemos a esa carpeta, y dentro nos encontramos con dos archivos que nos interesan:
+			</p>
+			<ul>
+				<li data-jmpress="drive-left after 500ms"><h3><span class="bullet">&bull;</span> id_rsa.pub</h3></li>
+				<p data-jmpress="drive-right after 500ms">Llave publica, es la que le entregamos al servidor o a alguna persona.</p>
+				<li data-jmpress="drive-left after 500ms"><h3><span class="bullet">&bull;</span> id_rsa</h3></li>
+				<p data-jmpress="drive-right after 500ms">Llave privada, jamas hay que perderla ni compartirla.</p>
+				</ul>
+			
 		</section>
 
-		<section id="clase7" data-x="6100" data-y="14500" data-template="stepper">
-			<h3>Nos movemos a esa carpeta, y dentro nos encontramos con dos archivos que nos interesan:
-			</h3>
-				<ul>
-					<li data-jmpress="drive-left after 500ms"><h3><span class="bullet">&bull;</span> id_rsa.pub</h3></li>
-						<p data-jmpress="drive-right after 500ms">Llave publica, es la que le entregamos al servidor o a alguna persona.</p>
-					<li data-jmpress="drive-left after 500ms"><h3><span class="bullet">&bull;</span> id_rsa</h3></li>
-						<p data-jmpress="drive-right after 500ms">Llave privada, jamas hay que perderla ni compartirla.</p>
-				</ul>
-		</section>
+		
 
 		<section id="clase7" data-x="6100" data-y="15000" data-scale="1">
-			<h2>Para analizarla usamos:</h2>
+			<h3>Para analizarla, dentro de .ssh usamos:</h3>
 			<code>cat id_rsa.pub</code>
-			<h3>Esto nos mostrara un código muy raro, lo copiamos absolutamente todo.</h3>
-			<h3>Ahora vamos a Github.com y en nuestro repositorio vamos a / Settings / SSH keys / Add SSH Key</h3>
-		</section>
-
-		<section id="clase7" data-x="6100" data-y="15500" data-scale="1">
-			<h3>Nos pedira un título y una llave, el título puede ser el que sea, pero en la llave pondremos lo que copiamos en la terminal.</h3>
-			<h3>Por ultimo damos click en Add key</h3>
-		</section>
+			<p>Esto nos mostrara un código muy raro y lo copiamos.</p>
+			<p>Ahora vamos a Github.com y en nuestro repositorio vamos a / Settings / SSH keys / Add SSH Key.</p><br />
+			<p>Nos pedira un título y la llave que copiamos en la terminal.</p>
+			<p>Por ultimo damos click en Add key.</p>
+		</section>		
 
 		<section id="clase7" data-x="6100" data-y="16000" data-scale="1">
-			<h3>Nos dirijimos al repositorio remoto en github y copiamos el SSH, en la terminal nos dirijimos a nuestro proyecto local, y ejecutamos:</h3>
+			<h3>Nos dirijimos al repositorio remoto en github y copiamos el SSH.</h3>
+			<p><span class="bullet">&bull;</span>Ejemplo de llave SSH: git@github.com:evercoders/ejemplo.git</p><br>
+			<p>En la terminal nos dirijimos a nuestro proyecto local, y ejecutamos:</p>
 			<code>git init</code>
-			<h3>Ahora hay que conectar via SSH con el repositorio remoto</h3>
-			<code>git remote add origin [SSH]</code>
-			<h3>Nota: remplazar [SSH] con nuestra direccion ssh que se encuentra en cada repositorio Ej:</h3>
-			<h3>git@github.com:evercoders/ejemplo.git</h3>
+			<p>Ahora hay que conectar via SSH con el repositorio remoto</p>
+			<code>git remote add origin [SSH]</code>			
+			
 		</section>
 
 		<section id="clase7" data-x="6100" data-y="16500" data-scale="1">
