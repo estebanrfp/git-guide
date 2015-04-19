@@ -792,13 +792,13 @@
 
 		<!-- SHELL SCRIPTS -->
 
-		<section id="clase8" data-x="11000" data-y="10000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="9100" data-y="9500" data-scale="1" data-rotate="180">
 			<h3>SHELL SCRIPTS</h3>
 			<p>Son una serie de comandos encapsulados dentro de un archivo.sh, se ejecutan con la terminal, y van de arriba a abajo.</p>
 			<p>Si por alguna razón tienes problemas en windows, descarga <a href="https://www.cygwin.com/">cygwin</a></p>
 		</section>	
 
-		<section id="clase8" data-x="12000" data-y="12000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="9000" data-y="9000" data-scale="1" data-rotate="180">
 			<h3>Crear .sh</h3>
 			<p>Solo tenemos que crear nuestro archivo .sh y empezar a escribir nuestras instrucciones</p>
 			<p>Para ejecutar este shell script y se aplique todo lo que tiene:</p>
@@ -807,13 +807,13 @@
 
 		<!-- GIT HOOKS -->
 
-		<section id="clase8" data-x="12000" data-y="10000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="9100" data-y="8500" data-scale="1" data-rotate="180">
 			<h3>GIT HOOKS</h3>
 			<p>Son scripts que se ejecutan antes, durante o después de realizar un movimiento con git.</p>
 			<p>Estos scripts son archivos .sh, y constan de 17</p>
 		</section>	
 
-		<section id="clase8" data-x="12000" data-y="8000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="9000" data-y="8000" data-scale="1" data-rotate="180">
 			<h3>post-commit</h3>
 			<p>Este hook se ejecuta después de generar un commit</p>
       <p>Es decir una ves que nosotros usemos</p>
@@ -821,14 +821,14 @@
 			<p>Este hook va a ejecutarse automáticamente.</p>
 		</section>
 
-		<section id="clase8" data-x="12000" data-y="7000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="9100" data-y="7500" data-scale="1" data-rotate="180">
 			<p>Para ello primero tenemos que ir a la carpeta hooks:</p>
 			<code>cd .git/hook</code>
 			<p>Nota: debemos haber iniciado git antes en la carpeta de nuestro proyecto</p>
 			<code>git init</code>
 		</section>
 
-		<section id="clase8" data-x="12000" data-y="6000" data-scale="1" data-rotate="90">
+		<section id="clase8" data-x="9000" data-y="7000" data-scale="1" data-rotate="180">
 			<h3>No está nuestro hook, así que tenemos que crear</h3>
 			<code>touch post-commit</code>
 			<h3>Para editar usamos:</h3>
@@ -838,12 +838,12 @@
 			<code>git push origin master</code>
 		</section>
 
-		<section id="clase8" data-x="12000" data-y="5000" data-scale="1" data-rotate="90">
+		<section id="clase8" data-x="9100" data-y="6500" data-scale="1" data-rotate="180">
 			<p>Ahora ya que tenemos guardado esos comandos en post-commit hay que dar permisos:</p>
 			<p>chmod +x post-commit</p>
 		</section>
 
-		<section id="clase8" data-x="12000" data-y="4000" data-scale="1" data-rotate="90">
+		<section id="clase8" data-x="9000" data-y="6000" data-scale="1" data-rotate="180">
 			<h3>Listo ahora ya tenemos el hook activado solo tenemos que generar el commit:</h3>
 			<code>git remote add origin [SSH]</code>
 			<code>git add -A</code>
@@ -853,7 +853,7 @@
 
 		<!-- AUTOMATIC DEPLOYMENT -->
 
-		<section id="clase8" data-x="14000" data-y="10000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="11000" data-y="10000" data-scale="1" data-rotate="180">
 			<h3>AUTOMATIC DEPLOYMENT</h3>
 			<p>Automatic Deployment es un manual deployment pero automatizado.</p>
 		</section>
@@ -873,12 +873,12 @@
 			<h3>SUB PROYECTO</h3>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="14000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="11500" data-scale="1" data-rotate="180">
 			<p>Antes de empezar con lo siguiente tenemos que lograr conectar el Local Repository con Github vía SSH</p>
 		</section>
 
 
-		<section id="clase8" data-x="16000" data-y="16000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="11000" data-scale="1" data-rotate="180">
 			<h3>1) Creamos carpeta</h3>
 			<code>mkdir portafolio</code>
 			<code>git init</code>
@@ -886,12 +886,12 @@
 			<code>git remote -v</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="18000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="10500" data-scale="1" data-rotate="180">
 			<h3>2) Jalamos archivos (si es necesario)</h3>
 			<code>git pull origin master</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="20000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="10000" data-scale="1" data-rotate="180">
 			<h3>3) Creamos archivo .gitignore & deploy.sh</h3>
 			<p>Nota: El archivo .gitignore lo que va hacer es no tomar los archivos .sh del repositorio.</p>
 			<code>touch .gitignore</code>
@@ -900,12 +900,12 @@
 			<code>touch deploy.sh</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="22000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="9500" data-scale="1" data-rotate="180">
 			<h3>4) Generamos Cambios</h3>
 			<p>Lo que haremos es editar nuestro index.html</p>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="24000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="9000" data-scale="1" data-rotate="180">
 			<h3>5) Creamos el Git HOOK y lo llenamos</h3>
 			<code>cd .git/hooks</code>
 			<code>touch post-commit</code>
@@ -916,12 +916,12 @@
 			<code>ssh usuario@dominio.com 'bash -s' < deploy.sh</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="26000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="8500" data-scale="1" data-rotate="180">
 			<h3>6) Autorizamos el Git Hook</h3>
 			<code>chmod +x post-commit</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="28000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="8000" data-scale="1" data-rotate="180">
 			<h3>7) Llenamos los comandos que se ejecutatan en servidor (deploy.sh)</h3>
 			<code>cd ../..</code>
 			<code>vim deploy.sh</code>
@@ -933,14 +933,14 @@
 			<code>git pull origin master</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="30000" data-scale="1" data-rotate="180">
+		<section id="clase8" data-x="16000" data-y="7500" data-scale="1" data-rotate="180">
 			<h3>Ahora probamos</h3>
 			<code>git status</code>
 			<code>git add -A</code>
 			<code>git commit -m "Deploy 1"</code>
 		</section>
 
-		<section id="clase8" data-x="16000" data-y="32000" data-scale="1" data-rotate="180" data-template="stepper">
+		<section id="clase8" data-x="16000" data-y="7000" data-scale="1" data-rotate="180" data-template="stepper">
 			<h3>Lo que va a pasar es lo siguiente:</h3>
 			<ul>
 				<li data-jmpress="drive-left after 200ms"><h3><span class="bullet">&bull;</span> Empieza a funsionar el Hook.</h3></li>
@@ -1024,17 +1024,17 @@
 		#																						#
 		#############################################
 		-->
-		<section id="clase7" data-x="18000" data-y="100" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="12000" data-y="-500" data-scale="1" data-rotate="180">
 		Ejemplo de deploy automático de repositorios bare.
 		</section>
 
 
-		<section id="clase7" data-x="18000" data-y="-500" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="18000" data-y="-1000" data-scale="1" data-rotate="180">
 		Gitcentral (contendrá los bare repository)
 		Deployserver ( normal repository )
 		</section>
 
-		<section id="clase7" data-x="18000" data-y="-1000" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="18000" data-y="-1500" data-scale="1" data-rotate="180">
 		Preparamos el git central:
 		<code>mkdir gitcentral</code>
 		<code>cd gitcentral</code>
@@ -1043,7 +1043,7 @@
 		</section>
 
 
-		<section id="clase7" data-x="18000" data-y="-1500" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="18000" data-y="-2000" data-scale="1" data-rotate="180">
 
 		Preparamos el repositorio local:
 
@@ -1057,7 +1057,7 @@
 
 		</section>
 
-		<section id="clase7" data-x="18000" data-y="-2000" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="18000" data-y="-2500" data-scale="1" data-rotate="180">
 
 
 		<h3>Deploy automático de repositorios bare</h3>
@@ -1068,7 +1068,7 @@
 
 		</section>
 
-		<section id="clase7" data-x="18000" data-y="-2000" data-scale="1" data-rotate="180">
+		<section id="clase7" data-x="18000" data-y="-3000" data-scale="1" data-rotate="180">
 
 
 
