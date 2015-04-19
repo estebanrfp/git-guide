@@ -786,110 +786,100 @@
 		-->
 
 		<section id="clase8" data-x="9000" data-y="10000" data-scale="1" data-rotate="180">
-			<h1>CLASE 5</h1>
-			<h2>Automatic Deployment + Git Hooks</h2>
+			<h2>CLASE 5</h2>
+			<h3>Automatic Deployment + Git Hooks</h3>
 		</section>
 
 		<!-- SHELL SCRIPTS -->
 
 		<section id="clase8" data-x="11000" data-y="10000" data-scale="1" data-rotate="180">
-			<h1>SHELL SCRIPTS</h1>
-		</section>
-
-		<section id="clase8" data-x="11000" data-y="12000" data-scale="1" data-rotate="180">
-			<h1>Qué es?</h1>
-			<h2>Son una serie de comandos encapsulados dentro de un archivo.sh, se ejecutan con la terminal, y van de arriba a abajo.</h2>
-			<h2>Si por alguna razón tienes problemas en windows, descarga <a href="https://www.cygwin.com/">cygwin</a></h2>
-		</section>
+			<h3>SHELL SCRIPTS</h3>
+			<p>Son una serie de comandos encapsulados dentro de un archivo.sh, se ejecutan con la terminal, y van de arriba a abajo.</p>
+			<p>Si por alguna razón tienes problemas en windows, descarga <a href="https://www.cygwin.com/">cygwin</a></p>
+		</section>	
 
 		<section id="clase8" data-x="12000" data-y="12000" data-scale="1" data-rotate="180">
-			<h1>Crear .sh</h1>
-			<h2>Solo tenemos que crear nuestro archivo .sh y empezar a escribir nuestras instrucciones</h2>
-			<h2>Para ejecutar este shell script y se aplique todo lo que tiene:</h2>
+			<h3>Crear .sh</h3>
+			<p>Solo tenemos que crear nuestro archivo .sh y empezar a escribir nuestras instrucciones</p>
+			<p>Para ejecutar este shell script y se aplique todo lo que tiene:</p>
 			<code>sh nombre.sh</code>
 		</section>
 
 		<!-- GIT HOOKS -->
 
 		<section id="clase8" data-x="12000" data-y="10000" data-scale="1" data-rotate="180">
-			<h1>GIT HOOKS</h1>
-		</section>
-
-		<section id="clase8" data-x="12000" data-y="9000" data-scale="1" data-rotate="180">
-			<h2>Son scripts que se ejecutan antes, durante o después de realizar un movimiento con git.</h2>
-			<h2>Estos scripts son archivos .sh, y constan de 17</h2>
-		</section>
+			<h3>GIT HOOKS</h3>
+			<p>Son scripts que se ejecutan antes, durante o después de realizar un movimiento con git.</p>
+			<p>Estos scripts son archivos .sh, y constan de 17</p>
+		</section>	
 
 		<section id="clase8" data-x="12000" data-y="8000" data-scale="1" data-rotate="180">
-			<h2>post-commit</h2>
-			<h2>Este hook se ejecuta después de generar un commit</h2>
-      <h2>Es decir una ves que nosotros usemos</h2>
+			<h3>post-commit</h3>
+			<p>Este hook se ejecuta después de generar un commit</p>
+      <p>Es decir una ves que nosotros usemos</p>
 			<code>git commit -m "mensaje"</code>
-			<h2>Este hook va a ejecutarse automáticamente.</h2>
+			<p>Este hook va a ejecutarse automáticamente.</p>
 		</section>
 
 		<section id="clase8" data-x="12000" data-y="7000" data-scale="1" data-rotate="180">
-			<h2>Para ello primero tenemos que ir a la carpeta hooks:</h2>
+			<p>Para ello primero tenemos que ir a la carpeta hooks:</p>
 			<code>cd .git/hook</code>
-			<h2>Nota: debemos haber iniciado git antes en la carpeta de nuestro proyecto</h2>
+			<p>Nota: debemos haber iniciado git antes en la carpeta de nuestro proyecto</p>
 			<code>git init</code>
 		</section>
 
 		<section id="clase8" data-x="12000" data-y="6000" data-scale="1" data-rotate="90">
-			<h2>No está nuestro hook, así que tenemos que crear</h2>
+			<h3>No está nuestro hook, así que tenemos que crear</h3>
 			<code>touch post-commit</code>
-			<h2>Para editar usamos:</h2>
+			<h3>Para editar usamos:</h3>
 			<code>vim post-commit</code>
-			<h2>Dentro ponemos</h2>
+			<h3>Dentro ponemos</h3>
 			<code>#!/bin/sh</code>
 			<code>git push origin master</code>
 		</section>
 
 		<section id="clase8" data-x="12000" data-y="5000" data-scale="1" data-rotate="90">
-			<h2>Ahora ya que tenemos guardado esos comandos en post-commit hay que dar permisos:</h2>
-			<h2>chmod +x post-commit</h2>
+			<p>Ahora ya que tenemos guardado esos comandos en post-commit hay que dar permisos:</p>
+			<p>chmod +x post-commit</p>
 		</section>
 
 		<section id="clase8" data-x="12000" data-y="4000" data-scale="1" data-rotate="90">
-			<h2>Listo ahora ya tenemos el hook activado solo tenemos que generar el commit:</h2>
+			<h3>Listo ahora ya tenemos el hook activado solo tenemos que generar el commit:</h3>
 			<code>git remote add origin [SSH]</code>
 			<code>git add -A</code>
 			<code>git commit -m "Usando hooks"</code>
-			<h2>Lo que paso es que se hace un push pero sin tener que ejecutarlo, los hooks son tus amigos y lo hacen por tí.</h2>
+			<p>Lo que paso es que se hace un push pero sin tener que ejecutarlo, los hooks son tus amigos y lo hacen por tí.</p>
 		</section>
 
 		<!-- AUTOMATIC DEPLOYMENT -->
 
 		<section id="clase8" data-x="14000" data-y="10000" data-scale="1" data-rotate="180">
-			<h1>AUTOMATIC DEPLOYMENT</h1>
-		</section>
-
-		<section id="clase8" data-x="14000" data-y="12000" data-scale="1" data-rotate="90">
-			<h2>Básicamente un Automatic Deployment es un manual deployment pero automatizado.</h2>
+			<h3>AUTOMATIC DEPLOYMENT</h3>
+			<p>Automatic Deployment es un manual deployment pero automatizado.</p>
 		</section>
 
 		<section id="clase8" data-x="14000" data-y="14000" data-scale="1" data-rotate="90">
-			<h2>Primero hay que crear nuestra llave SSH dentro de nuestro servidor.</h2>
+			<h3>Primero hay que crear nuestra llave SSH dentro de nuestro servidor.</h3>
 			<code>ssh-keygen</code>
-			<h2>La obtenemos con:</h2>
+			<p>La obtenemos con:</p>
 			<code>cat id_rsa.pub</code>
-			<h2>La copiamos y vamos a Github / settings/ add SSH key / agregamos llave</h2>
-			<h2>De esta forma logramos conectar el servidor con Github.</h2>
+			<p>La copiamos y vamos a Github / settings/ add SSH key / agregamos llave</p>
+			<p>De esta forma logramos conectar el servidor con Github.</p>
 		</section>
 
 		<!-- SUB-PROYECTO -->
 
 		<section id="clase8" data-x="16000" data-y="12000" data-scale="1" data-rotate="180">
-			<h1>SUB PROYECTO</h1>
+			<h3>SUB PROYECTO</h3>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="14000" data-scale="1" data-rotate="180">
-			<h2>Antes de empezar con lo siguiente tenemos que lograr conectar el Local Repository con Github vía SSH</h2>
+			<p>Antes de empezar con lo siguiente tenemos que lograr conectar el Local Repository con Github vía SSH</p>
 		</section>
 
 
 		<section id="clase8" data-x="16000" data-y="16000" data-scale="1" data-rotate="180">
-			<h1>1) Creamos carpeta</h1>
+			<h3>1) Creamos carpeta</h3>
 			<code>mkdir portafolio</code>
 			<code>git init</code>
 			<code>git remote add origin [SSH]</code>
@@ -897,26 +887,26 @@
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="18000" data-scale="1" data-rotate="180">
-			<h1>2) Jalamos archivos (si es necesario)</h1>
-			<h2>git pull origin master</h2>
+			<h3>2) Jalamos archivos (si es necesario)</h3>
+			<code>git pull origin master</code>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="20000" data-scale="1" data-rotate="180">
-			<h1>3) Creamos archivo .gitignore & deploy.sh</h1>
-			<h2>Nota: El archivo .gitignore lo que va hacer es no tomar los archivos .sh del repositorio.</h2>
+			<h3>3) Creamos archivo .gitignore & deploy.sh</h3>
+			<p>Nota: El archivo .gitignore lo que va hacer es no tomar los archivos .sh del repositorio.</p>
 			<code>touch .gitignore</code>
 			<code>vim .gitignore</code>
-			<h2>Dentro de .gitignore ponemos: *.sh</h2>
+			<h3>Dentro de .gitignore ponemos: *.sh</h3>
 			<code>touch deploy.sh</code>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="22000" data-scale="1" data-rotate="180">
-			<h1>4) Generamos Cambios</h1>
-			<h2>Lo que haremos es editar nuestro index.html</h2>
+			<h3>4) Generamos Cambios</h3>
+			<p>Lo que haremos es editar nuestro index.html</p>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="24000" data-scale="1" data-rotate="180">
-			<h1>5) Creamos el Git HOOK y lo llenamos</h1>
+			<h3>5) Creamos el Git HOOK y lo llenamos</h3>
 			<code>cd .git/hooks</code>
 			<code>touch post-commit</code>
 			<code>vim post-commit</code>
@@ -927,15 +917,15 @@
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="26000" data-scale="1" data-rotate="180">
-			<h1>6) Autorizamos el Git Hook</h1>
+			<h3>6) Autorizamos el Git Hook</h3>
 			<code>chmod +x post-commit</code>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="28000" data-scale="1" data-rotate="180">
-			<h1>7) Llenamos los comandos que se ejecutatan en servidor (deploy.sh)</h1>
+			<h3>7) Llenamos los comandos que se ejecutatan en servidor (deploy.sh)</h3>
 			<code>cd ../..</code>
 			<code>vim deploy.sh</code>
-			<h2>Dentro de deply ponemos lo siguiente:</h2>
+			<h3>Dentro de deply ponemos lo siguiente:</h3>
 			<code>#!/bin/sh</code>
 			<code>cd ~/WEBPATH/ -> Según tu servidor</code>
 			<code>git init</code>
@@ -944,14 +934,14 @@
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="30000" data-scale="1" data-rotate="180">
-			<h1>Ahora probamos</h1>
+			<h3>Ahora probamos</h3>
 			<code>git status</code>
 			<code>git add -A</code>
 			<code>git commit -m "Deploy 1"</code>
 		</section>
 
 		<section id="clase8" data-x="16000" data-y="32000" data-scale="1" data-rotate="180" data-template="stepper">
-			<h1>Lo que va a pasar es lo siguiente:</h1>
+			<h3>Lo que va a pasar es lo siguiente:</h3>
 			<ul>
 				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> Empieza a funsionar el Hook.</h2></li>
 				<li data-jmpress="drive-left after 800ms"><h2><span class="bullet">&bull;</span> Hace el commit y el push.</h2></li>
@@ -963,12 +953,12 @@
 		<!-- DEPLOY TOTAL EN SERVER -->
 
 		<section id="clase8" data-x="18000" data-y="12000" data-scale="1" data-rotate="180">
-			<h1>DEPLOY TOTAL EN SERVER</h1>
+			<h3>DEPLOY TOTAL EN SERVER</h3>
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="10000" data-scale="1" data-rotate="180" data-template="stepper">
-			<h2>Si por alguna circustancia extrema, no podemos usar Github, existen los "bare respositories", que no son más que repositorios limpios, envian y reciben contenido.</h2>
-			<h2>Un bare repository unicamente guarda el historial de cambios, con todos sus archivos, pero no puedes editarlos.</h2>
+			<p>Si por alguna circustancia extrema, no podemos usar Github, existen los "bare respositories", que no son más que repositorios limpios, envian y reciben contenido.</p>
+			<p>Un bare repository unicamente guarda el historial de cambios, con todos sus archivos, pero no puedes editarlos.</p>
 			<ul>
 				<li data-jmpress="drive-left after 600ms"><h2><span class="bullet">&bull;</span> UN REPOSITORIO BARE ¡jamás se toca!</h2></li>
 			</ul>
