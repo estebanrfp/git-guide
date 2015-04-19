@@ -97,6 +97,7 @@ strong {color: #B83526;}
 sup { font-size: 40%; vertical-align: top; }
 code {
 	color: #B83526;
+	display: block;
 	font-family: Consolas, monospace;
 	font-size: 1.1rem;	
 	padding: 3px;
