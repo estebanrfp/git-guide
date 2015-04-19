@@ -910,7 +910,7 @@
 			<code>cd .git/hooks</code>
 			<code>touch post-commit</code>
 			<code>vim post-commit</code>
-			<h2>Dentro de post-commit:</h2>
+			<h3>Dentro de post-commit:</h3>
 			<code>#!/bin/sh</code>
 			<code>git push origin master</code>
 			<code>ssh usuario@dominio.com 'bash -s' < deploy.sh</code>
@@ -943,10 +943,10 @@
 		<section id="clase8" data-x="16000" data-y="32000" data-scale="1" data-rotate="180" data-template="stepper">
 			<h3>Lo que va a pasar es lo siguiente:</h3>
 			<ul>
-				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> Empieza a funsionar el Hook.</h2></li>
-				<li data-jmpress="drive-left after 800ms"><h2><span class="bullet">&bull;</span> Hace el commit y el push.</h2></li>
-				<li data-jmpress="drive-left after 1200ms"><h2><span class="bullet">&bull;</span> Nos pidde la contraseña del área del servidor.</h2></li>
-				<li data-jmpress="drive-left after 1500ms"><h2><span class="bullet">&bull;</span> ¡Listo! ya hicimos deployment automático!</h2></li>
+				<li data-jmpress="drive-left after 200ms"><h3><span class="bullet">&bull;</span> Empieza a funsionar el Hook.</h3></li>
+				<li data-jmpress="drive-left after 800ms"><h3><span class="bullet">&bull;</span> Hace el commit y el push.</h3></li>
+				<li data-jmpress="drive-left after 1200ms"><h3><span class="bullet">&bull;</span> Nos pidde la contraseña del área del servidor.</h3></li>
+				<li data-jmpress="drive-left after 1500ms"><h3><span class="bullet">&bull;</span> ¡Listo! ya hicimos deployment automático!</h3></li>
 			</ul>
 		</section>
 
@@ -957,35 +957,33 @@
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="10000" data-scale="1" data-rotate="180" data-template="stepper">
-			<p>Si por alguna circustancia extrema, no podemos usar Github, existen los "bare respositories", que no son más que repositorios limpios, envian y reciben contenido.</p>
-			<p>Un bare repository unicamente guarda el historial de cambios, con todos sus archivos, pero no puedes editarlos.</p>
-			<ul>
-				<li data-jmpress="drive-left after 600ms"><h2><span class="bullet">&bull;</span> UN REPOSITORIO BARE ¡jamás se toca!</h2></li>
-			</ul>
+			<p>Si no podemos usar Github, existen los "bare respositories", que no son más que repositorios limpios, envían y reciben contenido.</p>
+			<p>Un bare repository unicamente guarda el historial de cambios, con todos sus archivos, pero no puedes editarlos. ¡jamás se toca!</p>
+			
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="8000" data-scale="1" data-rotate="180" data-template="stepper">
-			<h2>Primero creamos nuestras dos carpetas o aplicaciones en servidor.</h2>
+			<p>Primero creamos nuestras dos carpetas o aplicaciones en servidor.</p>
 			<ul>
-				<li data-jmpress="drive-left after 200ms"><h2><span class="bullet">&bull;</span> gitcentral</h2></li>
-				<h2>Guarda todos nuestros repositorios "bare" y solo va a recibir/enviar información.</h2>
-				<li data-jmpress="drive-left after 800ms"><h2><span class="bullet">&bull;</span> deployserver</h2></li>
-				<h2>Mostrara nuestro resultado, ya pasando por el "bare".</h2>
+				<li data-jmpress="drive-left after 200ms"><p><span class="bullet">&bull;</span> gitcentral</p></li>
+				<p>Guarda todos nuestros repositorios "bare" y solo va a recibir/enviar información.</p>
+				<li data-jmpress="drive-left after 800ms"><p><span class="bullet">&bull;</span> deployserver</p></li>
+				<p>Mostrara nuestro resultado, ya pasando por el "bare".</p>
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="6000" data-scale="1" data-rotate="180">
-			<h2>Entramos a nuestro servidor via SHH (Ya sabemos como) y borramos los index.html que tienen.</h2>
-			<h2>Ahora lo se hara es lo siguiente: normal repository (local) suba cambios al bare repository y que normal repository (server) reciba esos cambios.</h2>
+			<p>Entramos a nuestro servidor via SHH (Ya sabemos como) y borramos los index.html que tienen.</p>
+			<p>Ahora lo se hara es lo siguiente: normal repository (local) suba cambios al bare repository y que normal repository (server) reciba esos cambios.</p>
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="4000" data-scale="1" data-rotate="180">
-			<h1>LOCAL</h1>
-			<h2>Creamos nuestra carpeta y un archivo index.html</h2>
+			<h2>LOCAL</h2>
+			<h3>Creamos nuestra carpeta y un archivo index.html</h3>
 			<code>mkdir proyecto</code>
 			<code>touch index.html</code>
-			<h2>Editamos nuestro index</h2>
+			<h3>Editamos nuestro index</h3>
 			<code>vim index.html</code>
-			<h2>Creamos el commit</h2>
+			<h3>Creamos el commit</h3>
 			<code>git init</code>
 			<code>git status</code>
 			<code>git add -A</code>
@@ -993,26 +991,26 @@
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="2000" data-scale="1" data-rotate="180">
-			<h1>Servidor (Bare repository)</h1>
-			<h2>Entramos al servidor vía SSH y nos movemos hasta la carpeta</h2>
+			<h2>Servidor (Bare repository)</h2>
+			<h3>Entramos al servidor vía SSH y nos movemos hasta la carpeta</h3>
 			<code>ssh info@evercoders.com</code>
 			<code>cd/webapps/gitcentral</code>
-			<h2>Ejecutamos git init</h2>
+			<h3>Ejecutamos git init</h3>
 			<code>git init --bare --share</code>
 			<code>--bare -> Porque este repositorio va a ser un "bare".</code>
 			<code>--share -> Para que lo puedan pushear diferentes usuarios.</code>
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="1000" data-scale="1" data-rotate="180">
-			<h1>Local</h1>
-			<h2>Ahora tenemos que subirlo al servidor directamente, y mandamos cambios:</h2>
+			<h2>Local</h2>
+			<h3>Ahora tenemos que subirlo al servidor directamente, y mandamos cambios:</h3>
 			<code>git remote add origin</code>
 			<code>info@evercoders.com:home/goku/webapps/gitcentral</code>
 			<code>git push origin master</code>
 		</section>
 
 		<section id="clase8" data-x="18000" data-y="100" data-scale="1" data-rotate="180">
-			<h1>Servidor (normal repository)</h1>
+			<h3>Servidor (normal repository)</h3>
 			<code>git init</code>
 			<code>git remote add origin ../gitcentral</code>
 			<code>git pulls origin master</code>
@@ -1027,49 +1025,66 @@
 		#############################################
 		-->
 		<section id="clase7" data-x="18000" data-y="100" data-scale="1" data-rotate="180">
-		Deployment total en Servidor
+		Ejemplo de deploy automático de repositorios bare.
+		</section>
 
-		gitcentral (contendrá los bare repository)
-		deployserver ( normal repository )
 
-		preparamos el git central:
+		<section id="clase7" data-x="18000" data-y="-500" data-scale="1" data-rotate="180">
+		Gitcentral (contendrá los bare repository)
+		Deployserver ( normal repository )
+		</section>
 
-		mkdir gitcentral
-		cd gitcentral
-		git init --bare --share
-		git remote add origin ubuntu@54.194.94.13:/home/ubuntu/webapps/gitcentral
+		<section id="clase7" data-x="18000" data-y="-1000" data-scale="1" data-rotate="180">
+		Preparamos el git central:
+		<code>mkdir gitcentral</code>
+		<code>cd gitcentral</code>
+		<code>git init --bare --share</code>
+		<code>git remote add origin ubuntu@54.194.94.13:/home/ubuntu/webapps/gitcentral</code>
+		</section>
 
-		preparamos el repositorio local:
 
-		mkdir deployserver
-		cd deployserver
-		touch index.html ( escribimos dentro “hola mundo”)
+		<section id="clase7" data-x="18000" data-y="-1500" data-scale="1" data-rotate="180">
 
-		git init
-		git  add -A
-		git commit -m “primer commit”
+		Preparamos el repositorio local:
 
-		git remote add origin ../gitcentral
+		<code>mkdir deployserver</code>
+		<code>cd deployserver</code>
+		<code>touch index.html ( escribimos dentro “hola mundo”)</code>
+		<code>git init</code>
+		<code>git  add -A</code>
+		<code>git commit -m “primer commit”	</code>	
+		<code>git remote add origin ../gitcentral</code>
 
-		Deploy automático de repositorios bare
+		</section>
 
-		cd ../gitcentral/hooks
-		touch post-receive
-		chmod +x post-receive
+		<section id="clase7" data-x="18000" data-y="-2000" data-scale="1" data-rotate="180">
 
-		post-receive situado en /webapps/gitcentral/hooks
 
-		#!/bin/bash
-		cd ../deployserver || exit
-		unset GIT_DIR
-		git pull origin master
+		<h3>Deploy automático de repositorios bare</h3>
 
-		ó
+		<code>cd ../gitcentral/hooks</code>
+		<code>touch post-receive</code>
+		<code>chmod +x post-receive</code>
 
-		#!/bin/bash
-		cd /home/ubuntu/webapps/deployserver || exit
-		unset GIT_DIR
-		git pull origin master
+		</section>
+
+		<section id="clase7" data-x="18000" data-y="-2000" data-scale="1" data-rotate="180">
+
+
+
+		<h3>Post-receive situado en /webapps/gitcentral/hooks</h3>
+
+		<code>#!/bin/bash</code>
+		<code>cd ../deployserver || exit</code>
+		<code>unset GIT_DIR</code>
+		<code>git pull origin master</code>
+
+		<h3>ó</h3>
+
+		<code>#!/bin/bash</code>
+		<code>cd /home/ubuntu/webapps/deployserver || exit</code>
+		<code>unset GIT_DIR</code>
+		<code>git pull origin master</code>
 
 		</section>
 
