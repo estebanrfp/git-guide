@@ -179,24 +179,34 @@ section:not(.active) {
 	z-index: 999;
 	bottom: 10px;
 	left: 10px;
-	font-size: 80%;
+	
 }
 .nav li {
 	list-style: none;
 	float: left;
+	margin: 0;
 }
-.nav li a {
-	padding: 0 5px;
-	position: relative;
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration:    0.5s;
-	-ms-transition-duration:     0.5s;
-	-o-transition-duration:      0.5s;
-	transition-duration:         0.5s;
+.nav li a {	
+	text-align:center;	
+	padding: 3px 10px;
+	display:block;
+	height:16px;
+	line-height: 16px;	
+	cursor:pointer;
+	font-size:14px;
+	color:#EEE;
+	border-bottom:4px solid #9E2820;	
+	background-color: #B83526;
+	margin: 2px 5px;
 }
-.nav li a:hover {
+
+.nav li a:active {
+	border-bottom:1px solid #0045A6;
+	transform: translateY(3px);
+}
+/*.nav li a:hover {
 	bottom: 5px;
-}
+}*/
 .hint {
 	position: absolute;
 	width: 100%;
