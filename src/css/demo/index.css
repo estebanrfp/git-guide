@@ -88,15 +88,16 @@ li {
 	list-style: none;
  }
 span.bullet {
-	color: #B83526;
-	/*background: #B83526;*/
+	color: #009688;
+	/*background: #009688;*/
 	/*padding: .2rem;*/
 
 }
-strong {color: #B83526;}
+strong {color: #009688;}
 sup { font-size: 40%; vertical-align: top; }
 code {
-	color: #B83526;
+	color: #009688;
+	
 	display: block;
 	font-family: Consolas, monospace;
 	font-size: 1.1rem;	
@@ -195,8 +196,8 @@ section:not(.active) {
 	cursor:pointer;
 	font-size:14px;
 	color:#EEE;
-	border-bottom:4px solid #9E2820;	
-	background-color: #B83526;
+	border-bottom:4px solid #057c6d;	
+	background-color: #009688;
 	margin: 2px 5px;
 	text-decoration: none;
 }
