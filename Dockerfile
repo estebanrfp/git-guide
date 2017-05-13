@@ -1,25 +1,14 @@
-#
-# Node.js w/ Bower & Grunt Dockerfile
-#
-# https://github.com/digitallyseamless/docker-nodejs-bower-grunt
-#
-
-# Pull base image.
-FROM digitallyseamless/nodejs-bower-grunt:4
-MAINTAINER Digitally Seamless <docker@digitallyseamless.com>
-
-# Setup build folder
+FROM node:6.10
+# Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Onbuild instructions
-ONBUILD COPY package.json /usr/src/app/
-ONBUILD RUN npm install
-ONBUILD COPY bower.json .bowerrc* /usr/src/app/
-ONBUILD RUN bower install
-ONBUILD COPY . /usr/src/app/
-ONBUILD RUN [[ -f "Gruntfile.js" ]] && grunt build || /bin/true
-ONBUILD ENV NODE_ENV production
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
 
-# Define default command.
-CMD ["npm", "start"]
+# Bundle app source
+COPY . /usr/src/app
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
