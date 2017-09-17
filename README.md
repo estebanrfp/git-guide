@@ -13,7 +13,9 @@ run
 ===
 docker run -p 49160:8080 estebanrfp/guia-git
 
-@Slvrkl / @estebanrfp / @aguja2013 / @andresLoquesea
+## Credits
+
+[@estebanrfp](https://desarrolloactivo.com/)
 
 [Guia autoreferente](http://estebanrfp.github.io/git/)
 
