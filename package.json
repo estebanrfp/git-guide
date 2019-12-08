@@ -1,5 +1,5 @@
 {
-  "name": "guia-git",
+  "name": "git-guide",
   "version": "0.2.0",
   "title": "Guía interactiva de Git",
   "description": "Guía interactiva de Git.",
@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:estebanrfp/git.git"
+    "url": "git@github.com:estebanrfp/git-guide.git"
   },
   "scripts": {
     "start": "node index.js"
