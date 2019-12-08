@@ -11,7 +11,7 @@ docker build -t estebanrfp/guia-git .
 
 run
 ===
-docker run -p 49160:8080 estebanrfp/guia-git
+docker run -p 8080:8080 estebanrfp/guia-git
 
 ## Credits
 
