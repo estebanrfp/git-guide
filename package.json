@@ -1,8 +1,8 @@
 {
   "name": "git-guide",
   "version": "0.2.0",
-  "title": "Guía interactiva de Git",
-  "description": "Guía interactiva de Git.",
+  "title": "Guía interactiva sobre Git",
+  "description": "Guía interactiva sobre Git.",
   "homepage": "http://jmpressjs.github.com/jmpress.js",
   "author": {
     "name": "Esteban Fuster Pozzi @estebanrfp",

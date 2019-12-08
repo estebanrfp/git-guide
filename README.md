@@ -1,22 +1,20 @@
 #git-guide
 =========
 
-Guía de comandos Git
+Guía interactiva sobre Git
 
 Se acepta todo tipo de pull request, nuestra intención de base sobre este repositorio es el entrenamiento y uso de buenas practicas con Git y GitHub. 
 
 build
 =====
-docker build -t estebanrfp/guia-git .
+docker build -t estebanrfp/git-guide .
 
 run
 ===
-docker run -p 8080:8080 estebanrfp/guia-git
+docker run -p 8080:8080 estebanrfp/git-guide
 
 ## Credits
 
 [@estebanrfp](https://desarrolloactivo.com/)
-
-[Guia autoreferente](http://estebanrfp.github.io/git/)
 
 [desarrolloactivo.com](https://desarrolloactivo.com)
