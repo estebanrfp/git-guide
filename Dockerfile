@@ -1,12 +1,6 @@
-FROM node:6.10-alpine
-
-RUN mkdir -p /usr/src/app
+FROM node:13.1-alpine
 WORKDIR /usr/src/app
-
-COPY package.json /usr/src/app/
+COPY . .
 RUN npm install
-
-COPY . /usr/src/app
-
 EXPOSE 8080
 CMD [ "npm", "start" ]
