@@ -12,7 +12,7 @@ Se acepta todo tipo de pull request, nuestra intención de base sobre este repos
 ```
 docker build -t estebanrfp/git-guide .
 
-docker run -p 8080:8080 estebanrfp/git-guide
+docker run -p 8080:80 estebanrfp/git-guide
 ```
 
 ## Credits
