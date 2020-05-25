@@ -28,11 +28,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:estebanrfp/git-guide.git"
-  },
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
   }
 }
