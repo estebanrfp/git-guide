@@ -1,22 +1,24 @@
-# git-guide
+# Git Guide
 
-Guía interactiva sobre Git
+An interactive guide to Git and GitHub, designed to help you learn and practice good version control habits.
 
-## ScreenShoot
+## Screenshot
 
 ![GitHub Logo](docs/screenshot.png)
 
-Se acepta todo tipo de pull request, nuestra intención de base sobre este repositorio es el entrenamiento y uso de buenas practicas con Git y GitHub. 
+## Contributing
+
+We welcome all types of pull requests! The main goal of this repository is to provide a space for learning and practicing good Git and GitHub workflows.
 
 ## Docker
-```
+
+To run this project using Docker, follow these steps:
+
+```bash
 docker build -t estebanrfp/git-guide .
 
 docker run -p 8080:80 estebanrfp/git-guide
 ```
 
-## Credits
-
-[@estebanrfp](https://desarrolloactivo.com/)
-
-[desarrolloactivo.com](https://desarrolloactivo.com)
+## Credits
+Created by @estebanrfp.
